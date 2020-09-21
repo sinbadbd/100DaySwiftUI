@@ -7,6 +7,15 @@
 
 import Foundation
 
+
+struct NewsEnvelope: Decodable {
+    let status: String
+    let totalResults: Int
+    let articles: [News]
+}
+
+
+
 struct News: Decodable {
     let author: String?
     let title: String?
@@ -15,11 +24,6 @@ struct News: Decodable {
     let url: String?
 }
 
-struct NewsEnvelope: Decodable {
-    let status: String
-    let totalResults: Int
-    let articles: [News]
-}
 /*
      "author": "adam@letstalkbitcoin.com (The LTB Network), The LTB Network",
      "title": "WBD257 - Bitcoin Has Entered Phase 5 with PlanB, Jeff Booth & Preston Pysh",

@@ -6,6 +6,9 @@
 //
 
 import SwiftUI
+//import KingfisherSwi
+//import struct Kingfisher.KFImage
+import SDWebImageSwiftUI
 
 struct NewsCell: View {
     
@@ -15,13 +18,26 @@ struct NewsCell: View {
     
     
     var body: some View {
-        VStack{
-            Text(news.author).font(.title).foregroundColor(.blue)
-            
+        VStack(alignment: .leading, spacing: 10){
+            Text(news.author).font(.title2).foregroundColor(.blue)
+            WebImage(url: URL(string: news.urlToImage))
+                .resizable()
+                .aspectRatio(contentMode: .fill)
             Text(news.title).font(.caption)
             Text(news.description)
-            Text(news.url)
+//            Text(news.url)
+          
+          
+
+            
+        }.padding(.bottom,10)
+        .sheet(isPresented: $isPresent){
+            NewsArticleWebView(newsUrl: news.url)
         }
+        .onTapGesture{
+            self.isPresent.toggle()
+        }
+        
     }
 }
 
