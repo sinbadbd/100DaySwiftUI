@@ -9,9 +9,9 @@
 import Foundation
 
 class MovieResponse : Decodable{
-    let movie : [Movie]
+    let movie : [Moviex]
 }
-struct Movie: Decodable {
+struct Moviex: Decodable {
     let voteCount: Int
     let id: Int
     let video: Bool

@@ -26,14 +26,15 @@ struct ContentView: View {
     var body: some View {
         ScrollView(.vertical, showsIndicators: false){
             VStack(alignment: .leading){
-                TopBannerView()
-                MovieContent()
-                
+//                TopBannerView()
+//                MovieContent()
+                Dashboard()
                 // .padding()
                 //  Spacer()
             }
             
-        }.edgesIgnoringSafeArea(.top)
+        }
+        //.edgesIgnoringSafeArea(.top)
     }
 }
 

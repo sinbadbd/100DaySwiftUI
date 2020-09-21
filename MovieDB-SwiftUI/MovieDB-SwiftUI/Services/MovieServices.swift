@@ -7,11 +7,11 @@
 //
 
 import Foundation
-
+/*
 protocol MovieServices {
-    func fetchMovies(from endpoint: MovieListEndpoing, completion: @escaping (Result<Movie, MovieError>) -> ())
-    func fetchMovie(id: Int, completion: @escaping(Result<Movie, MovieError>) -> ())
-    func searchMovie(query: String, completion: @escaping(Movie, MovieError) -> ())
+    func fetchMovies(from endpoint: MovieListEndpoing, completion: @escaping (Result<Moviex, MovieError>) -> ())
+    func fetchMovie(id: Int, completion: @escaping(Result<Moviex, MovieError>) -> ())
+    func searchMovie(query: String, completion: @escaping(Moviex, MovieError) -> ())
 }
 
 enum MovieListEndpoing : String, CaseIterable {
@@ -56,3 +56,4 @@ enum MovieError : Error, CustomNSError {
         }
     }
 }
+ /**/*/
