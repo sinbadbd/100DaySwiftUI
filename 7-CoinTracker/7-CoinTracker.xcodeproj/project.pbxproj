@@ -11,6 +11,7 @@
 		1D9FB3B2251A36B80009D22C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9FB3B1251A36B80009D22C /* ContentView.swift */; };
 		1D9FB3B4251A36BA0009D22C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D9FB3B3251A36BA0009D22C /* Assets.xcassets */; };
 		1D9FB3B7251A36BA0009D22C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D9FB3B6251A36BA0009D22C /* Preview Assets.xcassets */; };
+		1D9FB3C8251A3B3F0009D22C /* CoinServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9FB3C7251A3B3F0009D22C /* CoinServices.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		1D9FB3B3251A36BA0009D22C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D9FB3B6251A36BA0009D22C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1D9FB3B8251A36BA0009D22C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D9FB3C7251A3B3F0009D22C /* CoinServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinServices.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 		1D9FB3C5251A37B40009D22C /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				1D9FB3C7251A3B3F0009D22C /* CoinServices.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 			files = (
 				1D9FB3B2251A36B80009D22C /* ContentView.swift in Sources */,
 				1D9FB3B0251A36B80009D22C /* __CoinTrackerApp.swift in Sources */,
+				1D9FB3C8251A3B3F0009D22C /* CoinServices.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
