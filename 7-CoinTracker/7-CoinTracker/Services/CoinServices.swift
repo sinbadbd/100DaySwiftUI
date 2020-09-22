@@ -27,22 +27,17 @@ final class CoinServices {
         
         return components
     }()
-}
-
-
-
-struct CoinResponse : Decodable {
-    let status      : String?
-    let data        : CoinData
-}
-struct CoinData     : Decodable {
-    let coin        : [Coin]
-}
-struct Coin         : Decodable {
-    let name        : String
-    let price       : String
-    let symbol      : String
-    let color       : String
-    let change      : String
-    let history     : [String]
+    
+    
+    
+    func getCoins () -> AnyPublisher<CoinResponse, Error>? {
+        guard let url = urlComonents.url else { return nil}
+        print(url)
+        
+        return URLSession.shared.dataTaskPublisher(for: url)
+            .map { $0.data }
+            .decode(type: CoinResponse.self, decoder: JSONDecoder())
+            .receive(on: RunLoop.main)
+            .eraseToAnyPublisher()
+    }
 }
