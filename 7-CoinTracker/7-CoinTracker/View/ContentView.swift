@@ -1,8 +1,8 @@
 //
 //  ContentView.swift
-//  AppStocks
+//  7-CoinTracker
 //
-//  Created by Imran on 20/9/20.
+//  Created by Imran on 22/9/20.
 //
 
 import SwiftUI
