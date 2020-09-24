@@ -22,6 +22,7 @@
 		1D9FB3E1251A85470009D22C /* NeumorphicShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9FB3E0251A85470009D22C /* NeumorphicShadow.swift */; };
 		1D9FB3E4251A867F0009D22C /* LineGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9FB3E3251A867F0009D22C /* LineGraph.swift */; };
 		1D9FB3F3251CF5120009D22C /* GrapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9FB3F2251CF5120009D22C /* GrapView.swift */; };
+		1D9FB3F6251D00250009D22C /* CoinCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9FB3F5251D00250009D22C /* CoinCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		1D9FB3E0251A85470009D22C /* NeumorphicShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeumorphicShadow.swift; sourceTree = "<group>"; };
 		1D9FB3E3251A867F0009D22C /* LineGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineGraph.swift; sourceTree = "<group>"; };
 		1D9FB3F2251CF5120009D22C /* GrapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrapView.swift; sourceTree = "<group>"; };
+		1D9FB3F5251D00250009D22C /* CoinCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 			children = (
 				1D9FB3B1251A36B80009D22C /* ContentView.swift */,
 				1D9FB3F2251CF5120009D22C /* GrapView.swift */,
+				1D9FB3F5251D00250009D22C /* CoinCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 			files = (
 				1D9FB3D2251A5BBD0009D22C /* Coin.swift in Sources */,
 				1D9FB3DB251A7ADB0009D22C /* Color+Extension.swift in Sources */,
+				1D9FB3F6251D00250009D22C /* CoinCell.swift in Sources */,
 				1D9FB3F3251CF5120009D22C /* GrapView.swift in Sources */,
 				1D9FB3E1251A85470009D22C /* NeumorphicShadow.swift in Sources */,
 				1D9FB3B2251A36B80009D22C /* ContentView.swift in Sources */,

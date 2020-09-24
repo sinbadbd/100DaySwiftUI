@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "EF1729AB-B97F-48C9-9221-35C03E43F64B"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C6B4E54F-B881-4F7C-AB13-E6F37E283A2B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "7-CoinTracker/Services/CoinServices.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "getCoins()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C6B4E54F-B881-4F7C-AB13-E6F37E283A2B - e1d19b20fb47ee2e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__CoinTracker.CoinServices.getCoins() -&gt; Swift.Optional&lt;Combine.AnyPublisher&lt;__CoinTracker.CoinResponse, Swift.Error&gt;&gt;"
+                  moduleName = "7-CoinTracker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/imran/Desktop/iOS-Projects/SwitUI100Days/7-CoinTracker/7-CoinTracker/Services/CoinServices.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "1256">
+               </Location>
+               <Location
+                  uuid = "C6B4E54F-B881-4F7C-AB13-E6F37E283A2B - b572cf4fe1ca8c94"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 ((data: Foundation.Data, response: __C.NSURLResponse)) -&gt; Foundation.Data in __CoinTracker.CoinServices.getCoins() -&gt; Swift.Optional&lt;Combine.AnyPublisher&lt;__CoinTracker.CoinResponse, Swift.Error&gt;&gt;"
+                  moduleName = "7-CoinTracker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/imran/Desktop/iOS-Projects/SwitUI100Days/7-CoinTracker/7-CoinTracker/Services/CoinServices.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "47">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "462A404C-5E08-47AC-8C29-59DE78707569"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "7-CoinTracker/Services/CoinServices.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "getCoins()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A33EA40B-4F96-47A7-84EC-8EB4EB130313"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "7-CoinTracker/Services/CoinServices.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "getCoins()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "59C6E9BD-C9C0-4B92-A17D-83E69AEC4402"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "7-CoinTracker/Services/CoinServices.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "getCoins()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "636A1179-2F20-4580-B875-A7A0FEA495CD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "7-CoinTracker/View/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "init()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

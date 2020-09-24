@@ -8,10 +8,10 @@
 import SwiftUI
 
 extension Color {
-    static let base =  Color(#colorLiteral(red: 0.06274510175, green: 0, blue: 0.1921568662, alpha: 1))
+    static let base =  Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))
     static let grayish = Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0))
     static let greenish = Color(#colorLiteral(red: 0.003531678082, green: 0.7845943921, blue: 0.2554045377, alpha: 1))
-    static let drakShadow = Color(#colorLiteral(red: 0.003531678082, green: 0, blue: 0.2554045377, alpha: 1))
+    static let drakShadow = Color(#colorLiteral(red: 0.890181303, green: 0.4134790897, blue: 0.3405633569, alpha: 0))
     
     init(hex: String) {
         self.init(UIColor(hex: hex))

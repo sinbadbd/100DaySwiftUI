@@ -16,8 +16,8 @@ final class CoinServices {
     lazy var urlComonents : URLComponents = {
         var components    = URLComponents()
         components.scheme = "https"
-        components.host   = "https://api.coinranking.com"
-        components.path   = "v1/public/coins"
+        components.host   = "https://api.coinranking.com/"
+        components.path   = "v1/public/coins?"
         
         components.queryItems = [
             URLQueryItem(name: "base", value: "USD"),
@@ -32,7 +32,7 @@ final class CoinServices {
     
     func getCoins () -> AnyPublisher<CoinResponse, Error>? {
         guard let url = urlComonents.url else { return nil}
-        print(url)
+        print("url:\(url)")
         
         return URLSession.shared.dataTaskPublisher(for: url)
             .map { $0.data }

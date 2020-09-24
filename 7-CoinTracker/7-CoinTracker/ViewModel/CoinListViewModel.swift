@@ -24,7 +24,7 @@ class CoinListViewModel: ObservableObject {
         cancellable = getCoins.sink(receiveCompletion: { err in
             print(err)
         }, receiveValue: { coinRes in
-            self.coins = coinRes.data.coin.map{CoinViewModel($0)}
+            self.coins = coinRes.data.coins.map{CoinViewModel($0)}
         })
     }
 }
