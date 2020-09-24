@@ -9,8 +9,12 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack{
+            GrapView(data: [0.4,0.3,0.9,0.21,0.6,0.0,0.1])
+            Text("Hello, world!")
+                .padding()
+        }
+        
     }
 }
 
