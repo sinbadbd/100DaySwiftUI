@@ -235,12 +235,12 @@ class APIClient {
     }
     
     //@GET POPULAR MOVIE
-    class func getPopularMovieList(completion: @escaping([Movie]?, Error?)-> Void) {
+    class func getPopularMovieList(completion: @escaping([Result]?, Error?)-> Void) {
         print(EndPoints.getPopularMovies.url)
         taskForGETRequest(url: EndPoints.getPopularMovies.url, response: Movie.self) { (response, error) in
             if let response = response {
                 //  print(response)
-                completion([response], nil)
+                completion(response.results, nil)
             } else {
                 completion(nil, error)
                 print(error.debugDescription)
@@ -250,12 +250,12 @@ class APIClient {
     }
     
     //@GET TOP RATED MOVIE
-    class func getTopRatedMovieList(completion: @escaping([Movie]?, Error?)-> Void) {
+    class func getTopRatedMovieList(completion: @escaping([Result]?, Error?)-> Void) {
         //print(EndPoints.getTopRatedMovies.url)
         taskForGETRequest(url: EndPoints.getTopRatedMovies.url, response: Movie.self) { (response, error) in
             if let response = response {
                 //  print("topMovi\([response.results])")
-                completion([response], nil)
+                completion(response.results, nil)
             } else {
                 completion(nil, error)
                 print(error.debugDescription)

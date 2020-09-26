@@ -12,52 +12,25 @@ struct Dashboard: View {
     
     @ObservedObject private var discMovie = DiscoverListModel()
     @ObservedObject private var upcomming = UpcommingMovieListVM()
+    @ObservedObject private var popular   = PopularMovieListVM()
+    @ObservedObject private var toprated  = TopRatedMovieModelVM()
     
     init() {
         discMovie.load()
         upcomming.load()
+        popular.load()
+        toprated.load()
     }
+    
     var body: some View {
         VStack{
             TopBar()
             
             DiscoverList(disListMovie: self.discMovie.discover)
-            
-            UpCommingMovieList(disListMovie: upcomming.upcomming)
-            
-            /*
-            ScrollView(.horizontal,  showsIndicators: false) {
-                VStack{
-                    HStack{
-                        ForEach(1...5, id:\.self){_ in
-                            VStack{
-                                
-                                Image("hero")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fill)
-                                    .frame(width: 150, height: 240)
-                                    .cornerRadius(10)
-                                
-                                Text("The Movie Db")
-                                    .font(.title3)
-                                    .foregroundColor(.black)
-                                
-                            }
-                        }
-                    }
-                }.padding()
-                
-            }
- */
-            
-            
-            // Now Playing Movie
-            
-            // Popular  Movie
-            
+            UpCommingMovieList(disListMovie: self.upcomming.upcomming)
+            PopularMviListVM(popularListMovie: self.popular.popular)
+            TopRatedMovieListVM(topRated: self.toprated.topRated)
             // Top rated  Movie
-            
-            // Now Playing Movie
             
             Spacer(minLength: 0)
             

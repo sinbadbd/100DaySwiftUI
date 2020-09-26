@@ -1,5 +1,5 @@
 //
-//  UpCommingMovieList.swift
+//  TopRatedMovieListVM.swift
 //  MovieDB-SwiftUI
 //
 //  Created by Imran on 27/9/20.
@@ -8,13 +8,12 @@
 
 import SwiftUI
 
-struct UpCommingMovieList: View {
-    let disListMovie : [MovieResultViewModel]
+struct TopRatedMovieListVM: View {
+    let topRated : [MovieResultViewModel]
     
     var body: some View {
-        // up comming
         HStack {
-            Text("Up Comming Movie").font(.title)
+            Text("Top Rated Movie").font(.title)
             Spacer(minLength: 0)
             Button(action: {}) {
                 Image(systemName: "chevron.right.2")
@@ -29,8 +28,9 @@ struct UpCommingMovieList: View {
             ScrollView(.horizontal,  showsIndicators: false) {
                 LazyHStack{
                     
-                    ForEach(self.disListMovie, id: \.title){dis in
-                        DiscoverCell(result: dis)
+                    ForEach(self.topRated, id: \.title){dis in
+//                        PopularMovieCell(
+                        MovieListCell(result: dis)
                     }
                 } .padding()
             }
@@ -38,8 +38,8 @@ struct UpCommingMovieList: View {
     }
 }
 
-//struct UpCommingMovieList_Previews: PreviewProvider {
+//struct TopRatedMovieListVM_Previews: PreviewProvider {
 //    static var previews: some View {
-//        UpCommingMovieList()
+//        TopRatedMovieListVM()
 //    }
 //}

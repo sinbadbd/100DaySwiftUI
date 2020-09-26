@@ -17,7 +17,7 @@ struct DiscoverList: View {
                 LazyHStack{
                     
                     ForEach(self.disListMovie, id: \.title){dis in
-                        DiscoverCell(result: dis)
+                        MovieListCell(result: dis)
                     }
                 } .padding()
             }
