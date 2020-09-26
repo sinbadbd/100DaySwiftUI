@@ -1,15 +1,14 @@
 //
-//  DiscoverCell.swift
+//  UpCommingCell.swift
 //  MovieDB-SwiftUI
 //
-//  Created by Imran on 26/9/20.
+//  Created by Imran on 27/9/20.
 //  Copyright © 2020 portonics. All rights reserved.
 //
 
 import SwiftUI
 import SDWebImageSwiftUI
-
-struct DiscoverCell: View {
+struct UpCommingCell: View {
     
     let result : MovieResultViewModel
     
@@ -33,8 +32,8 @@ struct DiscoverCell: View {
     }
 }
 
-struct DiscoverCell_Previews: PreviewProvider {
-    static var previews: some View {
-        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
-    }
-}
+//struct UpCommingCell_Previews: PreviewProvider {
+//    static var previews: some View {
+//        UpCommingCell()
+//    }
+//}

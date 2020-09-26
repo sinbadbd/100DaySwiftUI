@@ -9,8 +9,7 @@
 import Foundation
 import SwiftUI
 
-struct Movie : Decodable, Identifiable {
-    let id = UUID()
+struct Movie : Decodable { 
     let page: Int?
     let results: [Result]?
     let totalPages: Int?
