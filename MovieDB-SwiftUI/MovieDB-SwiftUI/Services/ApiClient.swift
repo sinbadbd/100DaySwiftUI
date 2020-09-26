@@ -208,11 +208,11 @@ class APIClient {
         task.resume()
     }
     
-    class func getUpcomingMovies(completion: @escaping([Movie]?, Error?)-> Void) {
+    class func getUpcomingMovies(completion: @escaping([Discover]?, Error?)-> Void) {
            // print(EndPoints.getNowPlayingMovie.url)
-           taskForGETRequest(url: EndPoints.getUpcomingMovies.url, response: Movie.self) { (response, error) in
+           taskForGETRequest(url: EndPoints.getUpcomingMovies.url, response: Discover.self) { (response, error) in
                if let response = response {
-                   completion([response], nil)
+                completion([response], nil)
                } else {
                    completion([], error)
                    print(error.debugDescription)
@@ -267,10 +267,10 @@ class APIClient {
     //@GET DISCOVER MOVIE
     class func getDiscoverMovieList(completion: @escaping([Result]?, Error?)-> Void) {
         //print(EndPoints.getTopRatedMovies.url)
-        taskForGETRequest(url: EndPoints.getDiscoverMovies.url, response: Result.self) { (response, error) in
+        taskForGETRequest(url: EndPoints.getDiscoverMovies.url, response: Discover.self) { (response, error) in
             if let response = response {
                 //  print("topMovi\([response.results])")
-                completion([response], nil)
+                completion(response.results, nil)
             } else {
                 completion(nil, error)
                 print(error.debugDescription)

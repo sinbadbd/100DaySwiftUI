@@ -10,12 +10,11 @@ import SwiftUI
 
 struct Dashboard: View {
     
-    @State var result :[Discover] = []
-    @State var movies : [Movie] = []
-    @State var resultMovie :[Result] = []
-    @State var disc : Discover!
-//    @State var imgUrl = URL(string: "\(APIClient.EndPoints.POSTER_URL + discover.posterPath)")
-
+    @ObservedObject private var discMovie = DiscoverListModel()
+    
+    init() {
+        discMovie.load()
+    }
     var body: some View {
         VStack{
             HStack{
@@ -36,47 +35,9 @@ struct Dashboard: View {
             .padding([.horizontal,.bottom])
             .padding(.top,5)
             
-            
-            ScrollView(.horizontal,  showsIndicators: false) {
-                VStack{
-                    HStack{
-                        ForEach(resultMovie, id:\.self){dis in
-                            ZStack{
-                                
-                                Image("hero")
-                                    .resizable()
-                                    .frame(width: 340, height: 180)
-                                
-                                Text(resultMovie[0].title)
-                                    .font(.title)
-                                    .foregroundColor(.white)
-                                    .frame(alignment: .bottom)
-                                    .offset(x: -60, y: 50)
-                                
-                                
-                                
-                                
-                            }.cornerRadius(10)
-                        }
-                    }
-                }.padding()
-            }
-            .onAppear{
-                APIClient.getDiscoverMovieList { (response, error) in
-//                    self.discover = response.
-//                    self.movies = response ?? []
-//                    self.resultMovie = response!
-//                    self.movies.append(self)
-//                    print(self.movies)
-//
-                    if let response =  response {
-//                        self.result = response.
-                        self.resultMovie = response
-//                        print("response\(self.result)")
-                    }
-                }
-            }
-            
+            DiscoverList(disListMovie: self.discMovie.discover)
+                //.frame(width: UIScreen.main.bounds.width-40, height: 200).background(Color.red)
+         
             // up comming
             HStack {
                 Text("Up Comming Movie").font(.title)

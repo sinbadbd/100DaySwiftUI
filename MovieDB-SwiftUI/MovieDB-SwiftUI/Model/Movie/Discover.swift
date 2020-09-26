@@ -8,11 +8,11 @@
 
 import Foundation
 import SwiftUI
-struct Discover : Decodable ,Identifiable{
+
+struct Discover : Decodable{
 //    var id: ObjectIdentifier
     
  
-   let id = UUID()
     let page: Int
     let totalResults: Int
     let totalPages: Int
