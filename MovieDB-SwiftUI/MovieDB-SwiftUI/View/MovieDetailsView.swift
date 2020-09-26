@@ -1,43 +1,14 @@
 //
-//  ContentView.swift
+//  MovieDetailsView.swift
 //  MovieDB-SwiftUI
 //
-//  Created by Imran on 15/6/20.
+//  Created by Imran on 27/9/20.
 //  Copyright © 2020 portonics. All rights reserved.
 //
 
 import SwiftUI
-import UIKit
 
-extension Formatter {
-    static let number = NumberFormatter()
-}
-extension FloatingPoint {
-    func fractionDigitsRounded(to digits: Int, roundingMode:  NumberFormatter.RoundingMode = .halfEven) -> String {
-        Formatter.number.roundingMode = roundingMode
-        Formatter.number.minimumFractionDigits = digits
-        Formatter.number.maximumFractionDigits = digits
-        return Formatter.number.string(for:  self) ?? ""
-    }
-}
-
-
-struct ContentView: View {
-    var body: some View {
-        NavigationView {
-            ScrollView(.vertical, showsIndicators: false){
-                VStack(alignment: .leading){
-                    Dashboard()
-                }
-            }
-            
-            .navigationTitle("THE MOVIE")
-        }
-        //.edgesIgnoringSafeArea(.top)
-    }
-}
-
-struct MovieContent:View {
+struct MovieDetailsView: View {
     var body : some View{
         
         VStack(alignment: .leading){
@@ -202,11 +173,8 @@ struct MovieContent:View {
     }
 }
 
-
-
-
-struct ContentView_Previews: PreviewProvider {
+struct MovieDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        MovieDetailsView()
     }
 }

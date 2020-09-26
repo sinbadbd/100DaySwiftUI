@@ -9,16 +9,17 @@
 import Foundation
 class DiscoverListModel : ObservableObject{
     @Published var discover = [MovieResultViewModel]()
-    
+ 
     func load(){
         getDiscover()
     }
     func getDiscover(){
+ 
         APIClient.getDiscoverMovieList { (response, error) in
             guard let response = response else { return }
             let discoverResponse = response.map(MovieResultViewModel.init)
             DispatchQueue.main.async {
-                self.discover = discoverResponse
+                 self.discover = discoverResponse
             }
         }
     }

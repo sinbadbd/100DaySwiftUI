@@ -28,10 +28,10 @@ struct PopularMviListVM: View {
         LazyVStack{
             ScrollView(.horizontal,  showsIndicators: false) {
                 LazyHStack{
-                    
                     ForEach(self.popularListMovie, id: \.title){dis in
-//                        PopularMovieCell(
-                            PopularMovieCell(result: dis)
+                        NavigationLink(destination: MovieDetailsView()) {
+                            MovieListCell(result: dis)
+                        }
                     }
                 } .padding()
             }
@@ -44,3 +44,12 @@ struct PopularMviListVM: View {
 //        PopularMovieListVM()
 //    }
 //}
+/*
+ 
+ NavigationLink(destination: MovieDetailView(movieId: movie.id)) {
+     MovieBackdropCard(movie: movie)
+         .frame(width: 272, height: 200)
+ }
+ 
+ 
+ */

@@ -28,7 +28,6 @@ struct UpCommingMovieList: View {
         LazyVStack{
             ScrollView(.horizontal,  showsIndicators: false) {
                 LazyHStack{
-                    
                     ForEach(self.disListMovie, id: \.title){dis in
                         MovieListCell(result: dis)
                     }
