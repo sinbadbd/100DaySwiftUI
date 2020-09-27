@@ -25,10 +25,46 @@ struct Dashboard: View {
     var body: some View {
         VStack{
             TopBar()
-            DiscoverList(disListMovie: self.discMovie.discover)
-            UpCommingMovieList(disListMovie: self.upcomming.upcomming)
-            PopularMviListVM(popularListMovie: self.popular.popular)
-            TopRatedMovieListVM(topRated: self.toprated.topRated)
+            
+            if discMovie.discover.count > 0 {
+                DiscoverList(disListMovie: self.discMovie.discover)
+            }else {
+                VStack{
+                    Text("Discover movie load faild!").foregroundColor(Color.red)
+                }
+            }
+            if self.upcomming.upcomming.count > 0 {
+                
+                UpCommingMovieList(disListMovie: self.upcomming.upcomming)
+            }else {
+                VStack{
+                    Text("Upcomming movie load faild!").foregroundColor(Color.red)
+                }
+            }
+            if self.popular.popular.count > 0 {
+                
+                PopularMviListVM(popularListMovie: self.popular.popular)
+            }else {
+                VStack{
+                    Text("Popular movie load faild!").foregroundColor(Color.red)
+                }
+            }
+            if self.toprated.topRated.count > 0 {
+                
+                TopRatedMovieListVM(topRated: self.toprated.topRated)
+            }else {
+                VStack{
+                    Text("Top Rated movie load faild!").foregroundColor(Color.red)
+                }
+            }
+            
+            Button( action: {}){
+                NavigationLink(destination: MovieDetailsView()){
+                    
+                    Text("next")
+                }
+            }
+            
             Spacer(minLength: 0)
         }
     }

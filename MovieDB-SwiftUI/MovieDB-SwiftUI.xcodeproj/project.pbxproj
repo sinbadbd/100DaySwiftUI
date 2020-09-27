@@ -263,11 +263,11 @@
 		1DD2E04C251683B00032967B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1D9FB4D3251FCDFC0009D22C /* TopBannerView.swift */,
 				1D9FB4CC251FC9100009D22C /* MovieDetailsView.swift */,
 				1D9FB485251FB94B0009D22C /* TopBar.swift */,
 				1DD2E04D251687060032967B /* Dashboard.swift */,
 				1D9FB4A2251FC0F90009D22C /* HomePage */,
-				1D9FB4D3251FCDFC0009D22C /* TopBannerView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
