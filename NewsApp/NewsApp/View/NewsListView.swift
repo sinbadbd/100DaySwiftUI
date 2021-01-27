@@ -12,9 +12,19 @@ struct NewsListView: View {
     let  newsCollection : [NewsViewModel]
     
     var body: some View {
-        List (self.newsCollection, id:\.url) { news in
-             NewsCell(news: news)
-        }
+        //        List (self.newsCollection, id:\.url) { news in
+        //             NewsCell(news: news)
+        //        }
+        VStack{
+            
+            ScrollView(showsIndicators: false){
+                ForEach(self.newsCollection, id: \.url) {
+                    news in
+                    NewsCell(news: news)
+                }
+            }
+            
+        }.padding()
     }
 }
 

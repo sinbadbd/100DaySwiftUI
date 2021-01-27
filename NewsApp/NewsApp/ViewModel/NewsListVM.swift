@@ -15,7 +15,7 @@ class NewsListVM : ObservableObject {
     }
     func getNews(){
         let networkManager = NetworkManager()
-        networkManager.getNews { (newsArticles) in
+        networkManager.getNews { (newsArticles, error) in
             guard let news = newsArticles else { return }
             
             let newsVM = news.map(NewsViewModel.init)
