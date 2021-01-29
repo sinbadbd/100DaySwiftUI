@@ -58,12 +58,13 @@ struct Dashboard: View {
                 }
             }
             
+            /*
             Button( action: {}){
                 NavigationLink(destination: MovieDetailsView()){
                     
                     Text("next")
                 }
-            }
+            }*/
             
             Spacer(minLength: 0)
         }

@@ -10,20 +10,47 @@ class NetworkManager {
     let baseString = "http://newsapi.org/v2/"
     let topHeadLine = "top-headlines?country=us"
     
-    func getNews(completion: @escaping (([News]?) -> Void )){
+    func getNews(completion: @escaping([News]?, Error?)-> Void){
         let urlString = "\(baseString)\(topHeadLine)&apiKey=\(Api.key)"
         
+        
         guard let url = URL(string: urlString) else {
-            completion(nil)
+//            completion(nil, Error)
             return
         }
-        URLSession.shared.dataTask(with: url) { (data, response, error) in
-            guard error == nil, let data = data  else {
-                completion(nil)
+        
+        taskForGETRequest(url: url, response: NewsEnvelope.self) { (response, error) in
+            if let response = response {
+                
+                completion(response.articles,error)
+            }else {
+                completion([], error)
+            }
+        }
+    }
+    
+    
+    func taskForGETRequest<ResponseType: Decodable>(url : URL, response: ResponseType.Type, completion: @escaping (ResponseType?, Error?)-> Void) {
+        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+            guard let data = data else {
+                DispatchQueue.main.async {
+                    completion(nil, error)
+                }
                 return
             }
-            let newsResponse = try? JSONDecoder().decode(NewsEnvelope.self, from: data)
-            newsResponse == nil ? completion(nil): completion(newsResponse?.articles)
-        }.resume()
+            
+            let decoder = JSONDecoder()
+            do {
+                let responseObject = try decoder.decode(ResponseType.self, from: data)
+                completion(responseObject, nil)
+                
+                decoder.keyDecodingStrategy = .convertFromSnakeCase
+            } catch {
+                DispatchQueue.main.sync {
+                    completion(nil, error)
+                }
+            }
+        }
+        task.resume()
     }
 }

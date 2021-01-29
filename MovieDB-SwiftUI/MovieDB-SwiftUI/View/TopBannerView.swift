@@ -9,62 +9,88 @@
 import SwiftUI
 
 struct TopBannerView : View {
+//    var result : MovieResultViewModel
     var body: some View {
         
         VStack{
             ZStack{
-//                GeometryReader { geo in
-                    Image("hero")
-                        .resizable()
-                        .scaledToFill()
-//                        .aspectRatio(contentMode: .fill)
-                        .clipped()
-//                        .frame(width: geo.size.width, height: 350)
+                //                Spacer(minLength: 0)
+                //                GeometryReader { geo in
+                Image("hero")
+                    .resizable()
+                    .scaledToFill()
+                    //                        .aspectRatio(contentMode: .fill)
+                    .clipped()
+                //                        .frame(width: geo.size.width, height: 350)
+                
+                
+                VStack{
                     
-                    VStack{
-                        Image("play-button-1").resizable()
-                            .renderingMode(.template)
-                            .aspectRatio(contentMode: .fit)
-                            .foregroundColor(.white)
-                            .frame(width: 40, height: 40)
-                        
+//                    Button(action: {
+//
+//                    }){
+//
+//
+//                        Image("play-button-1").resizable()
+//                            .renderingMode(.template)
+//                            .aspectRatio(contentMode: .fit)
+//                            .foregroundColor(.white)
+//                            .frame(width: 40, height: 40)
+//
+//
 //                    }
                     
                     
+                    //                    Spacer(minLength: 0)
                     
                     VStack(alignment: .leading){
                         //  Spacer()
-                        Text("The Avenger End Game")
                         
-                        HStack{
-                            ForEach(0..<5){buttonItem in
-                                
-                                Button(action: {
+                      //  GeometryReader { geometry in
+                           Spacer()
+                            VStack{
+                                Text("The Avenger End Game")
+                                    .font(.title)
+    //                            Spacer()
+                                HStack{
                                     
-                                }){
-                                    Text("Action")
-                                        .font(.headline)
-                                        .padding(5)
-                                        .overlay(
-                                            RoundedRectangle(cornerRadius: 4)
-                                                .stroke(Color.purple, lineWidth: 1)
-                                        )
+                                    ForEach(0..<5){buttonItem in
+                                        
+                                        Button(action: {
+                                            
+                                        }){
+                                            Text("Action")
+                                                .font(.headline)
+                                                .padding(5)
+                                                .overlay(
+                                                    RoundedRectangle(cornerRadius: 4)
+                                                        .stroke(Color.purple, lineWidth: 1)
+                                                )
+                                        }
+                                    }
                                 }
                             }
-                        }.padding(.top, 10)
-                    }
-//                    .offset(x: 0, y: 100).font(.title)
+                           // .frame(width:geometry.frame(in: .global).maxY)
+                        // }
+                        //“Text("maxY: \(Int(geometry.frame(in: .global).maxY))")”
+                        
+                         
+                        .padding(.vertical)
+                        
+                    }.padding(.top, 60)
+                    //                        Spacer(minLength: 0)
+                    //                    .offset(x: 0, y: 100).font(.title)
                     .foregroundColor(.white)
-//                     Spacer()
+                    //                     Spacer()
                 }
                 
                 
                 
-//                LinearGradient(gradient: Gradient(colors: [.clear,Color.black.opacity(0.8)]), startPoint: .top, endPoint: .bottom)
-//                    .frame(width: UIScreen.main.bounds.width, height: 350)
+                //                LinearGradient(gradient: Gradient(colors: [.clear,Color.black.opacity(0.8)]), startPoint: .top, endPoint: .bottom)
+                //                    .frame(width: UIScreen.main.bounds.width, height: 350)
                 
-             
-           
+                
+                
             }
         }
     }

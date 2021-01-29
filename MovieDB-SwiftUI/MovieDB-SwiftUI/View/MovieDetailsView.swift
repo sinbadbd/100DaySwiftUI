@@ -9,11 +9,15 @@
 import SwiftUI
 
 struct MovieDetailsView: View {
+//    let resutl : MovieResultViewModel
+    let details : MovieDetailsViewModel
     var body : some View{
  
         VStack(alignment: .leading){
             ScrollView{
-                 TopBannerView()
+                TopBannerView()
+                Text(details.posterPath)
+                Text(details.backdropPath)
 //                    Spacer()
                 /*
                 HStack{
@@ -162,7 +166,7 @@ struct MovieDetailsView: View {
 //  Spacer()
         }
 //        .padding()
-       .ignoresSafeArea(.all)
+        .ignoresSafeArea(.all)
 //        .edgesIgnoringSafeArea(.bottom)
             //  .frame(width: UIScreen.main.bounds.width-100)
             //        .padding(.trailing, 20)
@@ -178,9 +182,9 @@ struct MovieDetailsView: View {
         
     }
 }
-
-struct MovieDetailsView_Previews: PreviewProvider {
-    static var previews: some View {
-        MovieDetailsView()
-    }
-}
+//
+//struct MovieDetailsView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MovieDetailsView()
+//    }
+//}

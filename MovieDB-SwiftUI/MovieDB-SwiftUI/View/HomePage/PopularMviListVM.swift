@@ -29,9 +29,9 @@ struct PopularMviListVM: View {
             ScrollView(.horizontal,  showsIndicators: false) {
                 LazyHStack{
                     ForEach(self.popularListMovie, id: \.title){dis in
-                        NavigationLink(destination: MovieDetailsView()) {
-                            MovieListCell(result: dis)
-                        }
+//                        NavigationLink(destination: MovieDetailsView(details: <#MovieDetailsViewModel#>)) {
+//                            MovieListCell(result: dis)
+//                        }
                     }
                 } .padding()
             }
