@@ -30,18 +30,18 @@ struct CardsView: View {
             Image(item.image)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .matchedGeometryEffect(id: "image\(item.image)", in: animation)
+//                .matchedGeometryEffect(id: "image\(item.image)", in: animation)
                 .padding()
             
             Text(item.title)
                 .fontWeight(.bold)
                 .foregroundColor(.black)
-                .matchedGeometryEffect(id: "title\(item.id)", in: animation)
+//                .matchedGeometryEffect(id: "title\(item.id)", in: animation)
             
             Text(item.subTitle)
                 .font(.caption)
                 .foregroundColor(.gray)
-                .matchedGeometryEffect(id: "subTitle\(item.id)", in: animation)
+//                .matchedGeometryEffect(id: "subTitle\(item.id)", in: animation)
             
             HStack{
                 Button(action:{}) {
@@ -55,13 +55,15 @@ struct CardsView: View {
                 Text(item.rating)
                     .fontWeight(.heavy)
                     .foregroundColor(.black)
-                    .matchedGeometryEffect(id: "image\(item.rating)", in: animation)
+                    .matchedGeometryEffect(id: "rating\(item.rating)", in: animation)
            
             }.padding()
             
         }
         .padding(.bottom)
         .background(Color(item.image))
+            .matchedGeometryEffect(id: "color\(item.id)", in: animation)
+
         .cornerRadius(15)
     }
 }
