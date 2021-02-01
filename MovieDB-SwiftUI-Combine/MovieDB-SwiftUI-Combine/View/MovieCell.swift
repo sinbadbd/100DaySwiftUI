@@ -75,6 +75,7 @@ struct MovieCell: View {
         Text(movie.overview ?? "")
             .font(.caption2)
             .foregroundColor(.gray)
+            .lineLimit(3)
     }
 }
 //

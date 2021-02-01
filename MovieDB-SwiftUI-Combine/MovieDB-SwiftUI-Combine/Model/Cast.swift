@@ -8,18 +8,38 @@
 import Foundation
 
 struct CastResponse:Codable {
-    var results: [Cast]
+    var cast: [Cast]
 }
 struct Cast: Codable, Identifiable {
     var id: Int?
     var name: String?
-    var charecter: String?
+    var character: String?
     var profile_path: String?
     var profilePhoto: String{
         if let path = profile_path {
-           return "https://image.tmdb.org/t/p/original/\(path)"
+            return "https://image.tmdb.org/t/p/original/\(path)"
+        }else {
+            return "https://picsum.photos/200/300"
         }
-        return "https://picsum.photos/200/300"
+       
     }
     
 }
+/*
+ 
+
+    "adult": false,
+    "gender": 2,
+    "id": 504,
+    "known_for_department": "Acting",
+    "name": "Tim Robbins",
+    "original_name": "Tim Robbins",
+    "popularity": 2.901,
+    "profile_path": "/hsCu1JUzQQ4pl7uFxAVFLOs9yHh.jpg",
+    "cast_id": 3,
+    "character": "Andy Dufresne",
+    "credit_id": "52fe4231c3a36847f800b131",
+    "order": 0
+ 
+ 
+ */

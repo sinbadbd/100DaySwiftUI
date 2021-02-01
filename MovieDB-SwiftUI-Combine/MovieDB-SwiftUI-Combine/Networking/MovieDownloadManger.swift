@@ -30,7 +30,9 @@ final class MovieDownloadManager : ObservableObject {
         NetworkManager<CastResponse>.fetch(from: urlString) { (result) in
             switch result {
             case .success(let response):
-                self.cast = response.results
+              
+                self.cast = response.cast
+                print("respons: \( self.cast)")
             case .failure(let err):
                 print(err)
             }
@@ -39,7 +41,7 @@ final class MovieDownloadManager : ObservableObject {
     
     
     func getMovies(moveURL: MovieURL){
-        print(MovieURL.init(rawValue: moveURL.urlString))
+       // print(MovieURL.init(rawValue: moveURL.urlString))
         NetworkManager<MovieResponse>.fetch(from: moveURL.urlString) { (result) in
             switch result{
             case .success(let movieResponse):
