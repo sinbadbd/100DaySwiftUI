@@ -13,7 +13,7 @@ enum MovieURL:String {
     case populur = "popular"
     
     public var urlString: String {
-//        "\(API.BASE_URL)\(self.rawValue)??api_key=\(API.API_KEY)&language"
-        "\(API.BASE_URL)?api_key=\(API.API_KEY)&language"
+        
+        "\(API.BASE_URL)movie/\(self.rawValue)?api_key=\(API.API_KEY)"
     }
 }

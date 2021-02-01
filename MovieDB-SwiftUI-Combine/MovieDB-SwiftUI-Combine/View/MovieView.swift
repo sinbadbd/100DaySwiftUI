@@ -28,7 +28,60 @@ struct MovieView: View {
      }
     
     var body: some View {
-        Text("Moview view")
+        VStack{
+            VStack(alignment: .leading) {
+                Text(tabs[selectionIndex])
+                    .font(.largeTitle)
+                    .bold()
+                    .foregroundColor(.red)
+                    .padding(.top)
+                
+                HStack{
+                    Image(systemName: "magnifyingglass")
+                        .imageScale(.medium)
+                    
+                    TextField("Search...", text: $searchTerm)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        
+                }
+            }.padding(.horizontal)
+            
+            VStack{
+                Picker("_", selection: $selectionIndex){
+                    ForEach(0..<tabs.count){ index in
+                        Text(tabs[index])
+                            .font(.title)
+                            .bold()
+                            .tag(index)
+                    }
+                }.pickerStyle(SegmentedPickerStyle())
+                .onChange(of: selectionIndex, perform: { (_) in
+                    if selectionIndex == 0 {
+                        movieManager.getNowPlaying()
+                    } else if selectionIndex == 1 {
+                        movieManager.getUpcomming()
+                    }else if selectionIndex == 2 {
+                        movieManager.getPopular()
+                    }
+                })
+            }.padding()
+            
+            List{
+                ForEach(movieManager.movies.filter {
+                    searchTerm.isEmpty ? true :
+                        $0.title?.lowercased().localizedStandardContains(searchTerm.lowercased()) ?? true }) { movie in
+                    NavigationLink( destination: Text(movie.titleWithLanguage)) {
+                            Text(movie.title ?? "")
+                        }
+                   
+                    
+//                    Image(AsyncImage.init(url: mo, placeholder: ))
+                }
+            }.onAppear{
+                movieManager.getNowPlaying()
+            }
+            Spacer()
+        }
     }
 }
 

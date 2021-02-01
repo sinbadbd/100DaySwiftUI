@@ -34,12 +34,6 @@ struct AsyncImage<Placeholder: View>: View {
             }else{
                 placeholer
             }
-            
-//            if loader.load != nil {
-//                image(loader.image!)
-//            }else{
-//                placeholer
-//            }
         }
     }
 }

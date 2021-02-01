@@ -26,6 +26,7 @@ final class MovieDownloadManager : ObservableObject {
     
     func getCast (for movie: Movie){
         let urlString = "\(API.BASE_URL)movie/\(movie.id ?? 100)/credits?api_key=\(API.API_KEY)&language=en-US"
+        print("urlString:\(urlString)")
         NetworkManager<CastResponse>.fetch(from: urlString) { (result) in
             switch result {
             case .success(let response):
@@ -38,6 +39,7 @@ final class MovieDownloadManager : ObservableObject {
     
     
     func getMovies(moveURL: MovieURL){
+        print(MovieURL.init(rawValue: moveURL.urlString))
         NetworkManager<MovieResponse>.fetch(from: moveURL.urlString) { (result) in
             switch result{
             case .success(let movieResponse):
