@@ -18,7 +18,7 @@ final class MovieReviewManager:ObservableObject {
     }
     
     func getMovieReviews(){
-        getReviews(for: movie)
+//        getReviews(for: reviews)
     }
     private func getReviews(for movie: Movie){
         let urlString = "\(API.BASE_URL)movie/\(movie.id ?? 100)?api_key=\(API.API_KEY)"
@@ -26,7 +26,7 @@ final class MovieReviewManager:ObservableObject {
         NetworkManager<ReviewResponse>.fetch(from: urlString) { (result) in
             switch result {
             case .success(let response):
-                self.movie = response.results
+                self.reviews = response.results
             case .failure(let err):
                 print(err)
             }
