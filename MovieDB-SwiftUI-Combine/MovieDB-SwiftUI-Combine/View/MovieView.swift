@@ -71,11 +71,8 @@ struct MovieView: View {
                     searchTerm.isEmpty ? true :
                         $0.title?.lowercased().localizedStandardContains(searchTerm.lowercased()) ?? true }) { movie in
                     NavigationLink( destination: Text(movie.titleWithLanguage)) {
-                            Text(movie.title ?? "")
-                        }
-                   
-                    
-//                    Image(AsyncImage.init(url: mo, placeholder: ))
+                           MovieCell(movie: movie)
+                    }.listRowBackground(Color.clear)
                 }
             }.onAppear{
                 movieManager.getNowPlaying()

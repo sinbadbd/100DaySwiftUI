@@ -28,6 +28,7 @@
 		1D673C6725C801F700A2C046 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D673C6625C801F700A2C046 /* ImageCache.swift */; };
 		1D673C6B25C80C8400A2C046 /* EnviromentValue+ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D673C6A25C80C8400A2C046 /* EnviromentValue+ImageCache.swift */; };
 		1D673C6F25C80DAB00A2C046 /* AsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D673C6E25C80DAB00A2C046 /* AsyncImage.swift */; };
+		1D673C7725C82F4D00A2C046 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D673C7625C82F4D00A2C046 /* MovieCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		1D673C6625C801F700A2C046 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		1D673C6A25C80C8400A2C046 /* EnviromentValue+ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EnviromentValue+ImageCache.swift"; sourceTree = "<group>"; };
 		1D673C6E25C80DAB00A2C046 /* AsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImage.swift; sourceTree = "<group>"; };
+		1D673C7625C82F4D00A2C046 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 				1D673C3D25C7DAB600A2C046 /* SettingsView.swift */,
 				1D673C4025C7E02300A2C046 /* MovieView.swift */,
 				1D673C4325C7E02C00A2C046 /* DiscoverView.swift */,
+				1D673C7625C82F4D00A2C046 /* MovieCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 				1D673C4125C7E02300A2C046 /* MovieView.swift in Sources */,
 				1D673C3B25C7D7D900A2C046 /* HomeTabView.swift in Sources */,
 				1D673C3E25C7DAB600A2C046 /* SettingsView.swift in Sources */,
+				1D673C7725C82F4D00A2C046 /* MovieCell.swift in Sources */,
 				1D673C5A25C7ED0200A2C046 /* MovieURL.swift in Sources */,
 				1D673C2825C7D6C300A2C046 /* ContentView.swift in Sources */,
 				1D673C2625C7D6C300A2C046 /* MovieDB_SwiftUI_CombineApp.swift in Sources */,
