@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct ReviewResponse {
-    var result : [Review]
+struct ReviewResponse:Codable {
+    var results : [Review]
 }
 
 struct Review: Codable, Identifiable {

@@ -8,7 +8,7 @@
 import Foundation
 
 struct CastResponse:Codable {
-    
+    var results: [Cast]
 }
 struct Cast: Codable, Identifiable {
     var id: Int?

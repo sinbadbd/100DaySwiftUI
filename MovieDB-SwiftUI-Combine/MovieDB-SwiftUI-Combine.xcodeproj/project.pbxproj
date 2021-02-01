@@ -19,6 +19,11 @@
 		1D673C4A25C7E56600A2C046 /* Cast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D673C4925C7E56600A2C046 /* Cast.swift */; };
 		1D673C4D25C7E7CB00A2C046 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D673C4C25C7E7CB00A2C046 /* Review.swift */; };
 		1D673C5125C7E93300A2C046 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1D673C5025C7E93300A2C046 /* Alamofire */; };
+		1D673C5425C7EAD400A2C046 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D673C5325C7EAD400A2C046 /* NetworkManager.swift */; };
+		1D673C5725C7ECC200A2C046 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D673C5625C7ECC200A2C046 /* API.swift */; };
+		1D673C5A25C7ED0200A2C046 /* MovieURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D673C5925C7ED0200A2C046 /* MovieURL.swift */; };
+		1D673C5D25C7F57D00A2C046 /* MovieDownloadManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D673C5C25C7F57D00A2C046 /* MovieDownloadManger.swift */; };
+		1D673C6025C7FA6300A2C046 /* MovieReviewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D673C5F25C7FA6300A2C046 /* MovieReviewManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +40,11 @@
 		1D673C4625C7E26200A2C046 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		1D673C4925C7E56600A2C046 /* Cast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cast.swift; sourceTree = "<group>"; };
 		1D673C4C25C7E7CB00A2C046 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		1D673C5325C7EAD400A2C046 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		1D673C5625C7ECC200A2C046 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		1D673C5925C7ED0200A2C046 /* MovieURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieURL.swift; sourceTree = "<group>"; };
+		1D673C5C25C7F57D00A2C046 /* MovieDownloadManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDownloadManger.swift; sourceTree = "<group>"; };
+		1D673C5F25C7FA6300A2C046 /* MovieReviewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieReviewManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +109,11 @@
 		1D673C3625C7D76600A2C046 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				1D673C5325C7EAD400A2C046 /* NetworkManager.swift */,
+				1D673C5625C7ECC200A2C046 /* API.swift */,
+				1D673C5925C7ED0200A2C046 /* MovieURL.swift */,
+				1D673C5C25C7F57D00A2C046 /* MovieDownloadManger.swift */,
+				1D673C5F25C7FA6300A2C046 /* MovieReviewManager.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -199,12 +214,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D673C5725C7ECC200A2C046 /* API.swift in Sources */,
 				1D673C4A25C7E56600A2C046 /* Cast.swift in Sources */,
+				1D673C5D25C7F57D00A2C046 /* MovieDownloadManger.swift in Sources */,
 				1D673C4725C7E26200A2C046 /* Movie.swift in Sources */,
+				1D673C5425C7EAD400A2C046 /* NetworkManager.swift in Sources */,
 				1D673C4D25C7E7CB00A2C046 /* Review.swift in Sources */,
+				1D673C6025C7FA6300A2C046 /* MovieReviewManager.swift in Sources */,
 				1D673C4125C7E02300A2C046 /* MovieView.swift in Sources */,
 				1D673C3B25C7D7D900A2C046 /* HomeTabView.swift in Sources */,
 				1D673C3E25C7DAB600A2C046 /* SettingsView.swift in Sources */,
+				1D673C5A25C7ED0200A2C046 /* MovieURL.swift in Sources */,
 				1D673C2825C7D6C300A2C046 /* ContentView.swift in Sources */,
 				1D673C2625C7D6C300A2C046 /* MovieDB_SwiftUI_CombineApp.swift in Sources */,
 				1D673C4425C7E02C00A2C046 /* DiscoverView.swift in Sources */,
