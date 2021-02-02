@@ -11,6 +11,7 @@ enum MovieURL:String {
     case nowPlaying = "now_playing"
     case upcomming = "upcoming"
     case populur = "popular"
+    case topRated = "top_rated"
     
     public var urlString: String {
         

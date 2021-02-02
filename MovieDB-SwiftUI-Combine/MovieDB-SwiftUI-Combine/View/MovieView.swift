@@ -11,7 +11,7 @@ struct MovieView: View {
     
     @State private var searchTerm = ""
     @State private var selectionIndex = 0
-    @State private var tabs = ["Now Playing", "Upcomming", "Trending"]
+    @State private var tabs = ["Now Playing", "Upcomming", "Trending", "Top Rated"]
     
     @ObservedObject var movieManager = MovieDownloadManager()
     
@@ -62,6 +62,8 @@ struct MovieView: View {
                         movieManager.getUpcomming()
                     }else if selectionIndex == 2 {
                         movieManager.getPopular()
+                    }else if selectionIndex == 3 {
+                        movieManager.getTopRated()
                     }
                 })
             }.padding()

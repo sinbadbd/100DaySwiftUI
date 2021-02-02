@@ -15,10 +15,10 @@ struct MovieReviewView: View {
     init(movie: Movie) {
         self.movie = movie
         self.movieReviewMgr = MovieReviewManager(movie: movie)
-//
+        //
         UITableView.appearance().backgroundColor = UIColor.clear
         UITableViewCell.appearance().selectionStyle = .none
-
+        
         UINavigationBar.appearance().backgroundColor = .clear
         
     }
