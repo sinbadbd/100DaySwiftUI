@@ -6,17 +6,25 @@
 //
 
 import Foundation
-struct MovieImage:Codable {
+struct MovieImageResponse:Codable {
     var id:Int?
     var backdrops: [ImagesList]
 }
 struct ImagesList: Codable, Identifiable {
-    var id: String
-    var aspect_ratio: Int?
+    var id: String? // optional for Identifiable hence, got error
+    var aspect_ratio: Double?
     var file_path: String?
     var height:Int?
     var width:Int?
     var vote_average: Double?
+    
+    var movieImage: String{
+        if let path = file_path {
+            return "https://image.tmdb.org/t/p/original\(path)"
+        }else {
+            return ""
+        }
+    }
 }
 /*
  
