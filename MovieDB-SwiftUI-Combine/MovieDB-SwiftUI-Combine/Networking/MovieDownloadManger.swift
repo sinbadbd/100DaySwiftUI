@@ -11,10 +11,8 @@ import SwiftUI
 final class MovieDownloadManager : ObservableObject {
     @Published var movies = [Movie]()
     @Published var cast   = [Cast]()
-    
-//    static var baseURL = API.BASE_URL
-    
-    func getNowPlaying (){
+        
+    func getNowPlaying(){
         getMovies(moveURL: .nowPlaying)
     }
     func getUpcomming(){
@@ -23,10 +21,12 @@ final class MovieDownloadManager : ObservableObject {
     func getPopular(){
         getMovies(moveURL: .populur)
     }
+    func getTopRated(){
+        getMovies(moveURL: .topRated)
+    }
     
     func getCast (for movie: Movie){
         let urlString = "\(API.BASE_URL)movie/\(movie.id ?? 100)/credits?api_key=\(API.API_KEY)&language=en-US"
-        print("urlString:\(urlString)")
         NetworkManager<CastResponse>.fetch(from: urlString) { (result) in
             switch result {
             case .success(let response):
@@ -41,7 +41,6 @@ final class MovieDownloadManager : ObservableObject {
     
     
     func getMovies(moveURL: MovieURL){
-       // print(MovieURL.init(rawValue: moveURL.urlString))
         NetworkManager<MovieResponse>.fetch(from: moveURL.urlString) { (result) in
             switch result{
             case .success(let movieResponse):
@@ -54,11 +53,32 @@ final class MovieDownloadManager : ObservableObject {
         }
     }
     
-    func similarMovie(){
-        
+    func getSimilarMovie (for movie: Movie){
+        let urlString = "\(API.BASE_URL)movie/\(movie.id ?? 100)/similar?api_key=\(API.API_KEY)&language=en-US"
+
+        NetworkManager<MovieResponse>.fetch(from: urlString) { (result) in
+            switch result{
+            case .success(let movieResponse):
+                self.movies = movieResponse.results
+                
+            case .failure(let err):
+                print(err)
+            }
+        }
     }
-    func getRecommandedMovie(){
-        
+    func getRecommandedMovie (for movie: Movie){
+        let urlString = "\(API.BASE_URL)movie/\(movie.id ?? 100)/recommendations?api_key=\(API.API_KEY)&language=en-US"
+
+        NetworkManager<MovieResponse>.fetch(from: urlString) { (result) in
+            switch result{
+            case .success(let movieResponse):
+                self.movies = movieResponse.results
+                
+            case .failure(let err):
+                print(err)
+            }
+ 
+        }
     }
     
 }

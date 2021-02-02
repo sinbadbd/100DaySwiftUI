@@ -29,8 +29,9 @@ struct MovieDetailsView: View {
                     movieOverViewTitle
                     reviewLink
                     castInfo
-                   
-                   
+                    
+                    similarMovieList
+                    remondedMovieList
                 }.padding()
             }
         }
@@ -127,7 +128,7 @@ struct MovieDetailsView: View {
                                 .scaledToFit()
                                 .cornerRadius(15)
                                 .shadow(radius: 15)
-
+                                
                                 Text(cast.character ?? "--")
                                     .font(.caption)
                                     .foregroundColor(.white)
@@ -135,7 +136,7 @@ struct MovieDetailsView: View {
                                     .fixedSize(horizontal: false, vertical: true)
                             }
                         }
-                       
+                        
                     }
                 }
             }
@@ -144,11 +145,79 @@ struct MovieDetailsView: View {
         }
     }
     
+    private var similarMovieList : some View {
+        VStack(alignment: .leading){
+            Text("Similar Movie")
+            
+            ScrollView(.horizontal, showsIndicators: false){
+                HStack{
+                    ForEach(movieManager.movies){ movie in
+                        
+                        NavigationLink(destination: MovieDetailsView(movie: movie)){
+                            VStack{
+                                AsyncImage(url: URL(string: movie.posterPath )!) {
+                                    Rectangle()
+                                        .foregroundColor(Color.gray.opacity(0.5))
+                                    
+                                } image: { (img) -> Image in
+                                    Image(uiImage: img)
+                                        .resizable()
+                                }
+                                .frame(width: 100, height: 160)
+                                .animation(.easeOut(duration: 0.5))
+                                .transition(.opacity)
+                                .scaledToFit()
+                                .cornerRadius(15)
+                                .shadow(radius: 15)
+                                
+                                Text(movie.title ?? "")
+                            }
+                        }
+                    }.frame(width: 120, height: 180, alignment: .leading)
+                }
+            }
+            
+        }.onAppear{
+            movieManager.getSimilarMovie(for: movie)
+        }
+    }
+    
+    private var remondedMovieList : some View {
+        VStack(alignment: .leading){
+            Text("Recomanded Movie")
+            
+            ScrollView(.horizontal, showsIndicators: false){
+                HStack{
+                    ForEach(movieManager.movies){ movie in
+                        NavigationLink(destination: MovieDetailsView(movie: movie)){
+                            VStack{
+                                AsyncImage(url: URL(string: movie.posterPath )!) {
+                                    Rectangle()
+                                        .foregroundColor(Color.gray.opacity(0.5))
+                                    
+                                } image: { (img) -> Image in
+                                    Image(uiImage: img)
+                                        .resizable()
+                                }
+                                .frame(width: 100, height: 160)
+                                .animation(.easeOut(duration: 0.5))
+                                .transition(.opacity)
+                                .scaledToFit()
+                                .cornerRadius(15)
+                                .shadow(radius: 15)
+                                
+                                Text(movie.title ?? "")
+                            }
+                        }
+                    }.frame(width: 120, height: 180, alignment: .leading)
+                }
+            }
+            
+        }.padding(.top, 20)
+        .onAppear{
+            movieManager.getRecommandedMovie(for: movie)
+            
+        }
+    }
     
 }
-
-//struct MovieDetailsView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        MovieDetailsView()
-//    }
-//}

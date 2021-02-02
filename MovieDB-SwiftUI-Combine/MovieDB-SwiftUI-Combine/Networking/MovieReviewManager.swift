@@ -17,7 +17,6 @@ final class MovieReviewManager:ObservableObject {
     }
     
     func getMovieReviews(){
-//        getReviews(for: reviews)
         getReviews(for: movie)
     }
     private func getReviews(for movie: Movie){
