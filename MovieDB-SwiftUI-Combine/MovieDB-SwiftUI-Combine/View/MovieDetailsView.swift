@@ -168,7 +168,7 @@ struct MovieDetailsView: View {
                                 .transition(.opacity)
                                 .scaledToFit()
                                 .cornerRadius(15)
-                                .shadow(radius: 15)
+                                .shadow(radius: 15) 
                                 
                                 Text(movie.title ?? "")
                             }
@@ -218,6 +218,68 @@ struct MovieDetailsView: View {
             movieManager.getRecommandedMovie(for: movie)
             
         }
+<<<<<<< Updated upstream
+    } 
+=======
     }
     
+    private var movieImagesList : some View {
+        VStack(alignment: .leading){
+            Text("Images")
+            ScrollView(.horizontal, showsIndicators: false){
+                HStack{
+                    ForEach(movieManager.images){ images in
+                        VStack{
+                            
+                            AsyncImage(url: URL(string: images.movieImage)!) {
+                                Rectangle()
+                                    .foregroundColor(Color.gray.opacity(0.5))
+                                
+                            } image: { (img) -> Image in
+                                Image(uiImage: img)
+                                    .resizable()
+                            }
+                            .animation(.easeOut(duration: 0.5))
+                            .transition(.opacity)
+                            .scaledToFit()
+                            .cornerRadius(15)
+                            .shadow(radius: 15)
+                            
+                            Text(images.movieImage )
+                        }
+                       
+                        
+                        
+                    }.frame(width: 120, height: 180, alignment: .leading)
+                }
+                
+            }
+        }.onAppear{
+            movieManager.getMovieImageList(for: movie)
+        }
+        
+    }
+    
+//     private var movieImage : some View {
+//        VStack{
+//            AsyncImage(url: URL(string: movie.posterPath )!) {
+//                Rectangle()
+//                    .foregroundColor(Color.gray.opacity(0.5))
+//
+//            } image: { (img) -> Image in
+//                Image(uiImage: img)
+//                    .resizable()
+//            }
+//            .frame(width: 100, height: 160)
+//            .animation(.easeOut(duration: 0.5))
+//            .transition(.opacity)
+//            .scaledToFit()
+//            .cornerRadius(15)
+//            .shadow(radius: 15)
+//
+//            Text(movie.title ?? "")
+//        }
+//    }
+    
 }
+>>>>>>> Stashed changes
