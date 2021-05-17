@@ -10,19 +10,56 @@ import SwiftUI
 
 final class CityViewViewModel: ObservableObject {
     
-//    @Published var weather = WeatherResponse()
+    //    @Published var weather = WeatherResponse()
     @Published var weather: WeatherResponse?
     
     
     @Published var city: String = "Rangpur" {
         didSet {
             // call get location here
+            getLocation()
         }
     }
     
     init() {
         // getLocation()
+        getLocation()
     }
+    
+    
+    
+    private func getLocation(){
+        CLGeocoder().geocodeAddressString(city) { placeMarks, error in
+            if let place  = placeMarks, let place = place.first {
+                self.getWeather(croods: place.location?.coordinate)
+            }
+        }
+    }
+    
+    
+    private func getWeather(croods: CLLocationCoordinate2D?){
+        if let croods = croods {
+            let urlString = API.getURLFor(lat: croods.latitude, lon: croods.longitude)
+            getWeatherInternal(city: city, for: urlString)
+        }else {
+            let urlString = API.getURLFor(lat: Double(weather?.lat ?? 0), lon: Double(weather?.lon ?? 0))
+            getWeatherInternal(city: city, for: urlString)
+        }
+    }
+    
+    private func getWeatherInternal(city: String, for urlString: String){
+        NetworkManager<WeatherResponse>.fetch(for: URL(string: urlString)!) { result in
+            switch result {
+            case .success(let response):
+                DispatchQueue.main.async {
+                    self.weather = response
+                }
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    
     
     
     private lazy var dateFormatter: DateFormatter = {
@@ -42,7 +79,7 @@ final class CityViewViewModel: ObservableObject {
         formatter.dateFormat = "hh a"
         return formatter
     }()
-   
+    
     
     var date: String {
         return dateFormatter.string(from: Date(timeIntervalSince1970: weather?.current?.dt ?? 0))
@@ -93,11 +130,98 @@ final class CityViewViewModel: ObservableObject {
     }
     
     
-    private func getWeather(){
-        
+    func getWeatherAnimationIcon(icon: String) -> String {
+        switch icon {
+        case "01d":
+            return "01d-clear-sky"
+        case "02d":
+            return "01d-clear-sky"
+        case "03d":
+            return "01d-clear-sky"
+        case "04d":
+            return "01d-clear-sky"
+        case "09d":
+            return "01d-clear-sky"
+        case "10d":
+            return "01d-clear-sky"
+        case "11d":
+            return "01d-clear-sky"
+        case "13d":
+            return "01d-clear-sky"
+        case "50d":
+            return "01d-clear-sky"
+            
+        case "01n":
+            return "01n_clearsky"
+        case "02n":
+            return "02n_few_clouds"
+        case "03n":
+            return "03n_scattered_clouds"
+        case "04n":
+            return "04n_broken_clouds"
+        case "09n":
+            return "09n_shower_rain"
+        case "10n":
+            return "10n_rain"
+        case "11n":
+            return "11n_thunderstorm"
+        case "13n":
+            return "13n_snow"
+        case "50n":
+            return "50n_mist"
+            
+        default: break
+            
+        }
+        return icon
     }
     
-    private func getWeatherInternal(city: String, for urlString: String){
-        
+    
+    func getWeatherIcon(icon: String) -> String {
+        switch icon {
+        // DAY ICON
+        case "01d":
+            return "01d-sun"
+        case "02d":
+            return "01d-sun"
+        case "03d":
+            return "01d-sun"
+        case "04d":
+            return "01d-sun"
+        case "09d":
+            return "01d-sun"
+        case "10d":
+            return "01d-sun"
+        case "11d":
+            return "01d-sun"
+        case "12d":
+            return "01d-sun"
+        case "50d":
+            return "01d-sun"
+            
+         //NIGHT ICON
+        case "01n":
+            return "01d-sun"
+        case "02n":
+            return "01d-sun"
+        case "03n":
+            return "01d-sun"
+        case "04n":
+            return "01d-sun"
+        case "09n":
+            return "01d-sun"
+        case "10n":
+            return "01d-sun"
+        case "11n":
+            return "01d-sun"
+        case "12n":
+            return "01d-sun"
+        case "50n":
+            return "01d-sun"
+            
+        default: break
+            
+        }
+        return icon
     }
 }
