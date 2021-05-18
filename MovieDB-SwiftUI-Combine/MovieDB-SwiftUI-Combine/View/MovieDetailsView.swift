@@ -154,8 +154,28 @@ struct MovieDetailsView: View {
                     ForEach(movieManager.movies){ movie in
                         
                         NavigationLink(destination: MovieDetailsView(movie: movie)){
+ 
+                            VStack{
+                                AsyncImage(url: URL(string: movie.posterPath )!) {
+                                    Rectangle()
+                                        .foregroundColor(Color.gray.opacity(0.5))
+                                    
+                                } image: { (img) -> Image in
+                                    Image(uiImage: img)
+                                        .resizable()
+                                }
+                                .frame(width: 100, height: 160)
+                                .animation(.easeOut(duration: 0.5))
+                                .transition(.opacity)
+                                .scaledToFit()
+                                .cornerRadius(15)
+                                .shadow(radius: 15) 
+                                
+                                Text(movie.title ?? "")
+                            }
+ 
                              MovieImageCell(movie: movie)
-                            
+ 
                         }
                     }.frame(width: 120, height: 180, alignment: .leading)
                 }
@@ -185,7 +205,9 @@ struct MovieDetailsView: View {
         .onAppear{
             movieManager.getRecommandedMovie(for: movie)
             
-        }
+        } 
+    } 
+ 
     }
     
     private var movieImagesList : some View {
@@ -210,7 +232,9 @@ struct MovieDetailsView: View {
                             .cornerRadius(15)
                             .shadow(radius: 15)
                             
+ 
                             Text(images.movieImage ?? "")
+ 
                         }
                        
                         
@@ -224,26 +248,6 @@ struct MovieDetailsView: View {
         }
         
     }
-    
-//     private var movieImage : some View {
-//        VStack{
-//            AsyncImage(url: URL(string: movie.posterPath )!) {
-//                Rectangle()
-//                    .foregroundColor(Color.gray.opacity(0.5))
-//
-//            } image: { (img) -> Image in
-//                Image(uiImage: img)
-//                    .resizable()
-//            }
-//            .frame(width: 100, height: 160)
-//            .animation(.easeOut(duration: 0.5))
-//            .transition(.opacity)
-//            .scaledToFit()
-//            .cornerRadius(15)
-//            .shadow(radius: 15)
-//
-//            Text(movie.title ?? "")
-//        }
-//    }
-    
+ 
 }
+ 
