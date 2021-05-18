@@ -144,21 +144,21 @@ final class CityViewViewModel: ObservableObject {
         case "01d":
             return "01d-clear-sky"
         case "02d":
-            return "02n_few_clouds"
+            return "4792-weather-stormshowersday"
         case "03d":
-            return "01d-clear-sky"
+            return "4796-weather-cloudynight"
         case "04d":
-            return "01d-clear-sky"
+            return "4800-weather-partly-cloudy"
         case "09d":
-            return "01d-clear-sky"
+            return "4798-weather-snownight"
         case "10d":
-            return "01d-clear-sky"
+            return "4797-weather-rainynight"
         case "11d":
-            return "01d-clear-sky"
+            return "4803-weather-storm"
         case "13d":
-            return "01d-clear-sky"
+            return "4793-weather-snow"
         case "50d":
-            return "01d-clear-sky"
+            return "4795-weather-mist"
 
         case "01n":
             return "01n_clearsky"
