@@ -10,15 +10,33 @@ import SwiftUI
 struct ContentView: View {
     
     @ObservedObject var cityVM = CityViewViewModel()
- 
+    
     init() {
         cityVM.getLocation()
         print(cityVM.conditions)
     }
     
     var body: some View {
-        HeaderView(cityVM: cityVM)
-        TodayWeatherView(cityVM: cityVM)
+        ScrollView(.vertical, showsIndicators: false) {
+            VStack{
+                HeaderView(cityVM: cityVM)
+                CityNameView(city: cityVM.city, date: cityVM.date)
+                TodayWeatherView(cityVM: cityVM)
+                HourlyWeatherView(cityVM: cityVM)
+                DailyWeatherView(cityVM: cityVM)
+                Spacer()
+            }.padding()
+        }.background(
+            RoundedRectangle(cornerRadius: 10)
+                .fill(
+                    LinearGradient(
+                        gradient: Gradient(colors: [Color.blue]),
+                        startPoint: .top,
+                        endPoint: .bottom
+                    )
+                ).opacity(0.5)
+                .ignoresSafeArea()
+        )
     }
 }
 

@@ -5,8 +5,8 @@
 
 import Foundation
 
-struct WeatherHourly : Codable {
-
+struct WeatherHourly : Codable,Identifiable {
+        var id = UUID()
         let clouds : Int?
         let dewPoint : Float?
         let dt : Int?

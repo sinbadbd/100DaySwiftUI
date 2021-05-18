@@ -89,6 +89,9 @@
 		1D1D367D2652EBF400516858 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 1D1D367C2652EBF400516858 /* Lottie */; };
 		1D1D367F2652EC7900516858 /* CityNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1D367E2652EC7900516858 /* CityNameView.swift */; };
 		1D1D36812652EE4A00516858 /* TodayWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1D36802652EE4A00516858 /* TodayWeatherView.swift */; };
+		1D1D36832653970700516858 /* HourlyWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1D36822653970700516858 /* HourlyWeatherView.swift */; };
+		1D1D36852653B10E00516858 /* DailyWeatherViewswift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1D36842653B10E00516858 /* DailyWeatherViewswift.swift */; };
+		1D1D36872653CF8200516858 /* 02d_few_clouds.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D1D36862653CF8200516858 /* 02d_few_clouds.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -175,6 +178,9 @@
 		1D1D36792652E37700516858 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		1D1D367E2652EC7900516858 /* CityNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityNameView.swift; sourceTree = "<group>"; };
 		1D1D36802652EE4A00516858 /* TodayWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayWeatherView.swift; sourceTree = "<group>"; };
+		1D1D36822653970700516858 /* HourlyWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyWeatherView.swift; sourceTree = "<group>"; };
+		1D1D36842653B10E00516858 /* DailyWeatherViewswift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyWeatherViewswift.swift; sourceTree = "<group>"; };
+		1D1D36862653CF8200516858 /* 02d_few_clouds.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 02d_few_clouds.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,6 +251,8 @@
 				1D1D36792652E37700516858 /* HeaderView.swift */,
 				1D1D367E2652EC7900516858 /* CityNameView.swift */,
 				1D1D36802652EE4A00516858 /* TodayWeatherView.swift */,
+				1D1D36822653970700516858 /* HourlyWeatherView.swift */,
+				1D1D36842653B10E00516858 /* DailyWeatherViewswift.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -370,6 +378,7 @@
 			isa = PBXGroup;
 			children = (
 				1D1D36722652CE5100516858 /* 01d-clear-sky.json */,
+				1D1D36862653CF8200516858 /* 02d_few_clouds.json */,
 			);
 			path = day;
 			sourceTree = "<group>";
@@ -441,6 +450,7 @@
 				1D1D36042652C1FE00516858 /* 01n_clearsky.json in Resources */,
 				1D1D364F2652C29D00516858 /* 033-hurricane.png in Resources */,
 				1D1D36682652C29D00516858 /* 009-storm-1.png in Resources */,
+				1D1D36872653CF8200516858 /* 02d_few_clouds.json in Resources */,
 				1D1D36472652C29D00516858 /* 026-rainbow.png in Resources */,
 				1D1D360A2652C1FE00516858 /* 09n_shower_rain.json in Resources */,
 				1D1D36072652C1FE00516858 /* 03n_scattered_clouds.json in Resources */,
@@ -521,10 +531,12 @@
 				1D1D36812652EE4A00516858 /* TodayWeatherView.swift in Sources */,
 				1D1D35F42652860F00516858 /* Weather.swift in Sources */,
 				1D1D35F32652860F00516858 /* WeatherHourly.swift in Sources */,
+				1D1D36832653970700516858 /* HourlyWeatherView.swift in Sources */,
 				1D1D35F12652860F00516858 /* WeatherDaily.swift in Sources */,
 				1D1D35DE2652785400516858 /* API.swift in Sources */,
 				1D1D35CA2652771600516858 /* WeatherSwiftUIApp.swift in Sources */,
 				1D1D367F2652EC7900516858 /* CityNameView.swift in Sources */,
+				1D1D36852653B10E00516858 /* DailyWeatherViewswift.swift in Sources */,
 				1D1D35F02652860F00516858 /* WeatherFeelsLike.swift in Sources */,
 				1D1D35EE2652860F00516858 /* WeatherMinutely.swift in Sources */,
 				1D1D35EF2652860F00516858 /* WeatherTemp.swift in Sources */,

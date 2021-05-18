@@ -118,7 +118,8 @@ final class CityViewViewModel: ObservableObject {
 
     
     var temperature: String {
-        return getTempFor(temp: Double(weather?.current?.temp ?? 0))
+        return getTempFor(temp: Double((weather?.current?.temp ?? 0)  ))
+        //weatherModel.main.temp - 273.15
     }
 
     func getTimeFor(timestemp: Int) -> String {
@@ -126,20 +127,24 @@ final class CityViewViewModel: ObservableObject {
     }
 
     func getTempFor(temp: Double) -> String {
-        return String(format: "%0.1f", temp)
+        return String(format: "%0.1f", temp - 273.15 )
     }
 
     func getDayFor(timesTamp: Int) -> String {
         return dayFormatter.string(from: Date(timeIntervalSince1970: TimeInterval(timesTamp)))
     }
-    
-    
+    func toCelsius(temp: Double) -> String {
+         return ""
+    }
+    private func toFahrenheit(){
+        
+    }
     func getWeatherAnimationIcon(icon: String) -> String {
         switch icon {
         case "01d":
             return "01d-clear-sky"
         case "02d":
-            return "01d-clear-sky"
+            return "02n_few_clouds"
         case "03d":
             return "01d-clear-sky"
         case "04d":

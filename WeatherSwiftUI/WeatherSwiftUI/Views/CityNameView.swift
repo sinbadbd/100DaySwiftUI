@@ -13,7 +13,7 @@ struct CityNameView: View {
       var date: String
     
     var body: some View {
-        HStack{
+        VStack{
             Text(city).font(.title)
             Text(date).font(.caption2)
         }
