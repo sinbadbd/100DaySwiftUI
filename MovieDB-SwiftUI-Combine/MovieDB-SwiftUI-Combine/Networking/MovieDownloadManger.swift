@@ -11,7 +11,9 @@ import SwiftUI
 final class MovieDownloadManager : ObservableObject {
     @Published var movies = [Movie]()
     @Published var cast   = [Cast]()
-        
+    @Published var images = [ImagesList]()
+    @Published var vedio  = [Vedios]()
+    
     func getNowPlaying(){
         getMovies(moveURL: .nowPlaying)
     }
@@ -32,7 +34,7 @@ final class MovieDownloadManager : ObservableObject {
             case .success(let response):
               
                 self.cast = response.cast
-                print("respons: \( self.cast)")
+//                print("respons: \( self.cast)")
             case .failure(let err):
                 print(err)
             }
@@ -55,7 +57,7 @@ final class MovieDownloadManager : ObservableObject {
     
     func getSimilarMovie (for movie: Movie){
         let urlString = "\(API.BASE_URL)movie/\(movie.id ?? 100)/similar?api_key=\(API.API_KEY)&language=en-US"
-
+        print("getSimilarMovie:---\(urlString)")
         NetworkManager<MovieResponse>.fetch(from: urlString) { (result) in
             switch result{
             case .success(let movieResponse):
@@ -68,7 +70,7 @@ final class MovieDownloadManager : ObservableObject {
     }
     func getRecommandedMovie (for movie: Movie){
         let urlString = "\(API.BASE_URL)movie/\(movie.id ?? 100)/recommendations?api_key=\(API.API_KEY)&language=en-US"
-
+        print("getRecommandedMovie:---\(urlString)")
         NetworkManager<MovieResponse>.fetch(from: urlString) { (result) in
             switch result{
             case .success(let movieResponse):
@@ -81,4 +83,24 @@ final class MovieDownloadManager : ObservableObject {
         }
     }
     
+    func getMovieImageList(for movie: Movie){
+        //https://api.themoviedb.org/3/movie/577922/images?api_key=de05a59a85ef1e7797de8d4a6d343d0e
+        let urlString = "\(API.BASE_URL)movie/\(movie.id ?? 100)/images?api_key=\(API.API_KEY)"
+        print("getMovieImageList:---\(urlString)")
+        NetworkManager<MovieImageResponse>.fetch(from: urlString) { (result) in
+            switch result {
+                case .success(let response):
+                    self.images = response.backdrops
+                    print(" self.images:==\(self.images)")
+                case .failure(let err):
+                    print(err)
+            }
+            
+        }
+
+    }
+    func getMovieVedioList(){
+        
+    }
+ 
 }
