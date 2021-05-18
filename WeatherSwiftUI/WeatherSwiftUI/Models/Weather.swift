@@ -18,13 +18,4 @@ struct Weather : Codable {
                 case id = "id"
                 case main = "main"
         }
-    
-//        init(from decoder: Decoder) throws {
-//                let values = try decoder.container(keyedBy: CodingKeys.self)
-//                descriptionField = try values.decodeIfPresent(String.self, forKey: .descriptionField)
-//                icon = try values.decodeIfPresent(String.self, forKey: .icon)
-//                id = try values.decodeIfPresent(Int.self, forKey: .id)
-//                main = try values.decodeIfPresent(String.self, forKey: .main)
-//        }
-
 }

@@ -8,9 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @ObservedObject var cityVM = CityViewViewModel()
+ 
+    init() {
+        cityVM.getLocation()
+        print(cityVM.conditions)
+    }
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        HeaderView(cityVM: cityVM)
+        TodayWeatherView(cityVM: cityVM)
     }
 }
 

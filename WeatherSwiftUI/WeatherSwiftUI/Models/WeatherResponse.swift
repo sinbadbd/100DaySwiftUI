@@ -8,8 +8,8 @@ import Foundation
 struct WeatherResponse : Codable {
 
         let current : WeatherCurrent?
-        let daily : [WeatherDaily]?
-        let hourly : [WeatherHourly]?
+         let daily : [WeatherDaily]?
+         let hourly : [WeatherHourly]?
         let lat : Float?
         let lon : Float?
         let minutely : [WeatherMinutely]?
@@ -18,15 +18,12 @@ struct WeatherResponse : Codable {
 
         enum CodingKeys: String, CodingKey {
                 case current = "current"
-                case daily = "daily"
-                case hourly = "hourly"
+             case daily = "daily"
+                 case hourly = "hourly"
                 case lat = "lat"
                 case lon = "lon"
-                case minutely = "minutely"
+                 case minutely = "minutely"
                 case timezone = "timezone"
                 case timezoneOffset = "timezone_offset"
         }
-    
- 
-
 }

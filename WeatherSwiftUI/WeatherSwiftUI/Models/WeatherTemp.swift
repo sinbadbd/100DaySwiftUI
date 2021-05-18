@@ -22,15 +22,4 @@ struct WeatherTemp : Codable {
                 case morn = "morn"
                 case night = "night"
         }
-    
-//        init(from decoder: Decoder) throws {
-//                let values = try decoder.container(keyedBy: CodingKeys.self)
-//                day = try values.decodeIfPresent(Float.self, forKey: .day)
-//                eve = try values.decodeIfPresent(Float.self, forKey: .eve)
-//                max = try values.decodeIfPresent(Float.self, forKey: .max)
-//                min = try values.decodeIfPresent(Float.self, forKey: .min)
-//                morn = try values.decodeIfPresent(Float.self, forKey: .morn)
-//                night = try values.decodeIfPresent(Float.self, forKey: .night)
-//        }
-
 }
