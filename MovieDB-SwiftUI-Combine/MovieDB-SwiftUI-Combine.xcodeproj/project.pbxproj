@@ -10,6 +10,8 @@
 		1D05EE5225C91A2E0094963F /* Vedios.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D05EE5125C91A2E0094963F /* Vedios.swift */; };
 		1D05EE5525C91A3A0094963F /* ImagesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D05EE5425C91A3A0094963F /* ImagesList.swift */; };
 		1D05EE5A25C96A2C0094963F /* MovieImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D05EE5925C96A2C0094963F /* MovieImageCell.swift */; };
+		1D0C39842657BF36005E56D3 /* MoviePersonResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0C39832657BF36005E56D3 /* MoviePersonResponse.swift */; };
+		1D0C39862657C9D8005E56D3 /* PresonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0C39852657C9D7005E56D3 /* PresonManager.swift */; };
 		1D673C2625C7D6C300A2C046 /* MovieDB_SwiftUI_CombineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D673C2525C7D6C300A2C046 /* MovieDB_SwiftUI_CombineApp.swift */; };
 		1D673C2825C7D6C300A2C046 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D673C2725C7D6C300A2C046 /* ContentView.swift */; };
 		1D673C2A25C7D6C500A2C046 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D673C2925C7D6C500A2C046 /* Assets.xcassets */; };
@@ -41,6 +43,8 @@
 		1D05EE5125C91A2E0094963F /* Vedios.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vedios.swift; sourceTree = "<group>"; };
 		1D05EE5425C91A3A0094963F /* ImagesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesList.swift; sourceTree = "<group>"; };
 		1D05EE5925C96A2C0094963F /* MovieImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieImageCell.swift; sourceTree = "<group>"; };
+		1D0C39832657BF36005E56D3 /* MoviePersonResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePersonResponse.swift; sourceTree = "<group>"; };
+		1D0C39852657C9D7005E56D3 /* PresonManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresonManager.swift; sourceTree = "<group>"; };
 		1D673C2225C7D6C300A2C046 /* MovieDB-SwiftUI-Combine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MovieDB-SwiftUI-Combine.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D673C2525C7D6C300A2C046 /* MovieDB_SwiftUI_CombineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDB_SwiftUI_CombineApp.swift; sourceTree = "<group>"; };
 		1D673C2725C7D6C300A2C046 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -140,6 +144,7 @@
 				1D673C5925C7ED0200A2C046 /* MovieURL.swift */,
 				1D673C5C25C7F57D00A2C046 /* MovieDownloadManger.swift */,
 				1D673C5F25C7FA6300A2C046 /* MovieReviewManager.swift */,
+				1D0C39852657C9D7005E56D3 /* PresonManager.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -152,6 +157,7 @@
 				1D673C4C25C7E7CB00A2C046 /* Review.swift */,
 				1D05EE5125C91A2E0094963F /* Vedios.swift */,
 				1D05EE5425C91A3A0094963F /* ImagesList.swift */,
+				1D0C39832657BF36005E56D3 /* MoviePersonResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -247,6 +253,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D0C39842657BF36005E56D3 /* MoviePersonResponse.swift in Sources */,
 				1D673C5725C7ECC200A2C046 /* API.swift in Sources */,
 				1D673C4A25C7E56600A2C046 /* Cast.swift in Sources */,
 				1D673C6725C801F700A2C046 /* ImageCache.swift in Sources */,
@@ -260,6 +267,7 @@
 				1D673C4D25C7E7CB00A2C046 /* Review.swift in Sources */,
 				1D673C6025C7FA6300A2C046 /* MovieReviewManager.swift in Sources */,
 				1D673C6F25C80DAB00A2C046 /* AsyncImage.swift in Sources */,
+				1D0C39862657C9D8005E56D3 /* PresonManager.swift in Sources */,
 				1D05EE5525C91A3A0094963F /* ImagesList.swift in Sources */,
 				1D673C4125C7E02300A2C046 /* MovieView.swift in Sources */,
 				1DEA129225C8651400AC6FAD /* MovieArtistProfile.swift in Sources */,

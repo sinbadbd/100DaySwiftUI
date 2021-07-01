@@ -111,7 +111,7 @@ struct MovieDetailsView: View {
                 HStack(alignment: .top, spacing: 20){
                     ForEach(movieManager.cast) { cast in
                         NavigationLink(
-                            destination: Text(cast.character ?? "") ){//MovieArtistProfile()
+                            destination: MovieArtistProfile(cast: cast) ){//MovieArtistProfile()
                             
                             VStack{
                                 AsyncImage(url: URL(string: cast.profilePhoto )!) {
@@ -208,7 +208,7 @@ struct MovieDetailsView: View {
         } 
     } 
  
-    }
+   
     
     private var movieImagesList : some View {
         VStack(alignment: .leading){
@@ -216,9 +216,11 @@ struct MovieDetailsView: View {
             ScrollView(.horizontal, showsIndicators: false){
                 HStack{
                     ForEach(movieManager.images){ images in
+                        
                         VStack{
                             
                             AsyncImage(url: URL(string: images.movieImage)!) {
+                               
                                 Rectangle()
                                     .foregroundColor(Color.gray.opacity(0.5))
                                 
@@ -233,7 +235,7 @@ struct MovieDetailsView: View {
                             .shadow(radius: 15)
                             
  
-                            Text(images.movieImage ?? "")
+//                            Text(images.movieImage )
  
                         }
                        
@@ -249,5 +251,6 @@ struct MovieDetailsView: View {
         
     }
  
-}
+
  
+}
