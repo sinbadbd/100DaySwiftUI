@@ -19,6 +19,10 @@
 		1D0C39972658E2F0005E56D3 /* StepperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0C39962658E2F0005E56D3 /* StepperView.swift */; };
 		1D0C3999265987F3005E56D3 /* StartPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0C3998265987F3005E56D3 /* StartPageView.swift */; };
 		1D0C399C26598AB5005E56D3 /* FitnessDashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0C399B26598AB5005E56D3 /* FitnessDashboard.swift */; };
+		1D67B9712690B26A005F2833 /* LongPressGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D67B9702690B26A005F2833 /* LongPressGesture.swift */; };
+		1D67B9742690B6B6005F2833 /* PositioninGeo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D67B9732690B6B6005F2833 /* PositioninGeo.swift */; };
+		1D67B9762690B8F2005F2833 /* GettingSizeGeo .swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D67B9752690B8F2005F2833 /* GettingSizeGeo .swift */; };
+		1D67B9792690CC5D005F2833 /* TrapeziumShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D67B9782690CC5D005F2833 /* TrapeziumShape.swift */; };
 		1D9D98D5268CD8660008FADB /* DragGesture_OnChanged.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9D98D4268CD8660008FADB /* DragGesture_OnChanged.swift */; };
 		1D9D98D7268CDB8C0008FADB /* DragGestureCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9D98D6268CDB8C0008FADB /* DragGestureCircle.swift */; };
 		1D9D98D9268CDD5D0008FADB /* DragGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9D98D8268CDD5D0008FADB /* DragGesture.swift */; };
@@ -44,6 +48,10 @@
 		1D0C39962658E2F0005E56D3 /* StepperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperView.swift; sourceTree = "<group>"; };
 		1D0C3998265987F3005E56D3 /* StartPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPageView.swift; sourceTree = "<group>"; };
 		1D0C399B26598AB5005E56D3 /* FitnessDashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessDashboard.swift; sourceTree = "<group>"; };
+		1D67B9702690B26A005F2833 /* LongPressGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongPressGesture.swift; sourceTree = "<group>"; };
+		1D67B9732690B6B6005F2833 /* PositioninGeo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositioninGeo.swift; sourceTree = "<group>"; };
+		1D67B9752690B8F2005F2833 /* GettingSizeGeo .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GettingSizeGeo .swift"; sourceTree = "<group>"; };
+		1D67B9782690CC5D005F2833 /* TrapeziumShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrapeziumShape.swift; sourceTree = "<group>"; };
 		1D9D98D4268CD8660008FADB /* DragGesture_OnChanged.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragGesture_OnChanged.swift; sourceTree = "<group>"; };
 		1D9D98D6268CDB8C0008FADB /* DragGestureCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragGestureCircle.swift; sourceTree = "<group>"; };
 		1D9D98D8268CDD5D0008FADB /* DragGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragGesture.swift; sourceTree = "<group>"; };
@@ -87,9 +95,27 @@
 			path = FinanceApp;
 			sourceTree = "<group>";
 		};
+		1D67B9722690B68B005F2833 /* GeometryReader */ = {
+			isa = PBXGroup;
+			children = (
+				1D67B9732690B6B6005F2833 /* PositioninGeo.swift */,
+				1D67B9752690B8F2005F2833 /* GettingSizeGeo .swift */,
+			);
+			path = GeometryReader;
+			sourceTree = "<group>";
+		};
+		1D67B9772690CC4D005F2833 /* Shape */ = {
+			isa = PBXGroup;
+			children = (
+				1D67B9782690CC5D005F2833 /* TrapeziumShape.swift */,
+			);
+			path = Shape;
+			sourceTree = "<group>";
+		};
 		1D9D98DA268DDD410008FADB /* Gesture */ = {
 			isa = PBXGroup;
 			children = (
+				1D0C39902658516E005E56D3 /* GestureExample.swift */,
 				1D9D98E0268DF1410008FADB /* Long Press */,
 				1D9D98DF268DF1310008FADB /* DragGesture */,
 			);
@@ -111,6 +137,7 @@
 		1D9D98E0268DF1410008FADB /* Long Press */ = {
 			isa = PBXGroup;
 			children = (
+				1D67B9702690B26A005F2833 /* LongPressGesture.swift */,
 			);
 			path = "Long Press";
 			sourceTree = "<group>";
@@ -134,6 +161,8 @@
 		1DFA1DA82654201800C2DF97 /* MasterySwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				1D67B9772690CC4D005F2833 /* Shape */,
+				1D67B9722690B68B005F2833 /* GeometryReader */,
 				1D0C399A26598A94005E56D3 /* FinanceApp */,
 				1D0C398C26584DE3005E56D3 /* TestView.swift */,
 				1D0C3987265829A6005E56D3 /* PropertyWrapper */,
@@ -146,7 +175,6 @@
 				1D0C397D265587D6005E56D3 /* ShapeView.swift */,
 				1D0C397F26558B4C005E56D3 /* BadgeView.swift */,
 				1D0C398E26585065005E56D3 /* ZStackColor.swift */,
-				1D0C39902658516E005E56D3 /* GestureExample.swift */,
 				1D0C3992265852CF005E56D3 /* HighPriorityGestureExample.swift */,
 				1D0C3994265854CE005E56D3 /* TransactionExample.swift */,
 				1D0C39962658E2F0005E56D3 /* StepperView.swift */,
@@ -234,12 +262,16 @@
 			files = (
 				1D0C3993265852CF005E56D3 /* HighPriorityGestureExample.swift in Sources */,
 				1D0C39972658E2F0005E56D3 /* StepperView.swift in Sources */,
+				1D67B9712690B26A005F2833 /* LongPressGesture.swift in Sources */,
+				1D67B9762690B8F2005F2833 /* GettingSizeGeo .swift in Sources */,
 				1D0C39912658516E005E56D3 /* GestureExample.swift in Sources */,
 				1D0C398B26583CBA005E56D3 /* BindViewExmlple.swift in Sources */,
 				1D0C3999265987F3005E56D3 /* StartPageView.swift in Sources */,
 				1DFA1DAC2654201800C2DF97 /* ContentView.swift in Sources */,
 				1D0C398026558B4C005E56D3 /* BadgeView.swift in Sources */,
+				1D67B9792690CC5D005F2833 /* TrapeziumShape.swift in Sources */,
 				1D0C398926582F6E005E56D3 /* StateExmpleswift.swift in Sources */,
+				1D67B9742690B6B6005F2833 /* PositioninGeo.swift in Sources */,
 				1D0C398D26584DE3005E56D3 /* TestView.swift in Sources */,
 				1D9D98DE268DEEDE0008FADB /* MinimumDistanceGesture.swift in Sources */,
 				1D9D98D5268CD8660008FADB /* DragGesture_OnChanged.swift in Sources */,
