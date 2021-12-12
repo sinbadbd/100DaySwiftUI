@@ -11,8 +11,7 @@ struct SettingsView: View {
     @Binding var isPresented : Bool
     @State private var selection = 1
     @State private var email = ""
-//    @State private var submit = false
-    
+    //    @State private var submit = false
     
     var body: some View {
         NavigationView{

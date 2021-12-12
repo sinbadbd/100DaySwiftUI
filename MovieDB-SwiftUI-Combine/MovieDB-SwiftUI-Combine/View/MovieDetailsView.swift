@@ -29,7 +29,7 @@ struct MovieDetailsView: View {
                     movieOverViewTitle
                     reviewLink
                     castInfo
-                    movieImagesList
+                    //movieImagesList
                     similarMovieList
                     remondedMovieList
                 }.padding()
@@ -210,44 +210,44 @@ struct MovieDetailsView: View {
  
     }
     
-    private var movieImagesList : some View {
-        VStack(alignment: .leading){
-            Text("Images")
-            ScrollView(.horizontal, showsIndicators: false){
-                HStack{
-                    ForEach(movieManager.images){ images in
-                        VStack{
-                            
-                            AsyncImage(url: URL(string: images.movieImage)!) {
-                                Rectangle()
-                                    .foregroundColor(Color.gray.opacity(0.5))
-                                
-                            } image: { (img) -> Image in
-                                Image(uiImage: img)
-                                    .resizable()
-                            }
-                            .animation(.easeOut(duration: 0.5))
-                            .transition(.opacity)
-                            .scaledToFit()
-                            .cornerRadius(15)
-                            .shadow(radius: 15)
-                            
+//    private var movieImagesList : some View {
+//        VStack(alignment: .leading){
+//            Text("Images")
+//            ScrollView(.horizontal, showsIndicators: false){
+//                HStack{
+//                    ForEach(movieManager.images){ images in
+//                        VStack{
+//
+//                            AsyncImage(url: URL(string: images.movieImage)!) {
+//                                Rectangle()
+//                                    .foregroundColor(Color.gray.opacity(0.5))
+//
+//                            } image: { (img) -> Image in
+//                                Image(uiImage: img)
+//                                    .resizable()
+//                            }
+//                            .animation(.easeOut(duration: 0.5))
+//                            .transition(.opacity)
+//                            .scaledToFit()
+//                            .cornerRadius(15)
+//                            .shadow(radius: 15)
+//
+//
+//                            Text(images.movieImage ?? "")
+//
+//                        }
+//
+//
+//
+//                    }.frame(width: 120, height: 180, alignment: .leading)
+//                }
+//
+//            }
+//        }.onAppear{
+//            movieManager.getMovieImageList(for: movie)
+//        }
+//
+//    }
  
-                            Text(images.movieImage ?? "")
- 
-                        }
-                       
-                        
-                        
-                    }.frame(width: 120, height: 180, alignment: .leading)
-                }
-                
-            }
-        }.onAppear{
-            movieManager.getMovieImageList(for: movie)
-        }
-        
-    }
- 
-}
+
  

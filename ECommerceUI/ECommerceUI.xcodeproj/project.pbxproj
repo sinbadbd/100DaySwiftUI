@@ -1,0 +1,428 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		07B03BC12764D5B900763233 /* ECommerceUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B03BC02764D5B900763233 /* ECommerceUIApp.swift */; };
+		07B03BC32764D5B900763233 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B03BC22764D5B900763233 /* ContentView.swift */; };
+		07B03BC52764D5BC00763233 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07B03BC42764D5BC00763233 /* Assets.xcassets */; };
+		07B03BC82764D5BC00763233 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07B03BC72764D5BC00763233 /* Preview Assets.xcassets */; };
+		07B03BD32764D81600763233 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07B03BCF2764D81400763233 /* Roboto-Medium.ttf */; };
+		07B03BD42764D81600763233 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07B03BD02764D81400763233 /* Roboto-Regular.ttf */; };
+		07B03BD52764D81600763233 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07B03BD12764D81500763233 /* Roboto-Bold.ttf */; };
+		07B03BD62764D81600763233 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07B03BD22764D81500763233 /* Roboto-Light.ttf */; };
+		07B03BDA2764DF7500763233 /* OnBoardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B03BD92764DF7500763233 /* OnBoardingPage.swift */; };
+		07B03BDD2764E03500763233 /* AppFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B03BDC2764E03500763233 /* AppFonts.swift */; };
+		07B03BE02764EDC000763233 /* LoginPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B03BDF2764EDC000763233 /* LoginPageView.swift */; };
+		07B03BE32764EDF500763233 /* LoginPageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B03BE22764EDF500763233 /* LoginPageModel.swift */; };
+		07B03BE52765D32300763233 /* CustomCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B03BE42765D32300763233 /* CustomCorners.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		07B03BBD2764D5B900763233 /* ECommerceUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ECommerceUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		07B03BC02764D5B900763233 /* ECommerceUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ECommerceUIApp.swift; sourceTree = "<group>"; };
+		07B03BC22764D5B900763233 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		07B03BC42764D5BC00763233 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		07B03BC72764D5BC00763233 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		07B03BCF2764D81400763233 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		07B03BD02764D81400763233 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		07B03BD12764D81500763233 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		07B03BD22764D81500763233 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		07B03BD72764DDC100763233 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		07B03BD92764DF7500763233 /* OnBoardingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingPage.swift; sourceTree = "<group>"; };
+		07B03BDC2764E03500763233 /* AppFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFonts.swift; sourceTree = "<group>"; };
+		07B03BDF2764EDC000763233 /* LoginPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageView.swift; sourceTree = "<group>"; };
+		07B03BE22764EDF500763233 /* LoginPageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageModel.swift; sourceTree = "<group>"; };
+		07B03BE42765D32300763233 /* CustomCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCorners.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		07B03BBA2764D5B900763233 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		07B03BB42764D5B900763233 = {
+			isa = PBXGroup;
+			children = (
+				07B03BBF2764D5B900763233 /* ECommerceUI */,
+				07B03BBE2764D5B900763233 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		07B03BBE2764D5B900763233 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				07B03BBD2764D5B900763233 /* ECommerceUI.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		07B03BBF2764D5B900763233 /* ECommerceUI */ = {
+			isa = PBXGroup;
+			children = (
+				07B03BE12764EDDD00763233 /* ViewModel */,
+				07B03BDE2764E25A00763233 /* Resources */,
+				07B03BDB2764E01B00763233 /* AppSettings */,
+				07B03BD82764DF5300763233 /* View */,
+				07B03BD72764DDC100763233 /* Info.plist */,
+				07B03BCE2764D74100763233 /* Fonts */,
+				07B03BC02764D5B900763233 /* ECommerceUIApp.swift */,
+				07B03BC22764D5B900763233 /* ContentView.swift */,
+				07B03BC42764D5BC00763233 /* Assets.xcassets */,
+				07B03BC62764D5BC00763233 /* Preview Content */,
+			);
+			path = ECommerceUI;
+			sourceTree = "<group>";
+		};
+		07B03BC62764D5BC00763233 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				07B03BC72764D5BC00763233 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		07B03BCE2764D74100763233 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				07B03BD12764D81500763233 /* Roboto-Bold.ttf */,
+				07B03BD22764D81500763233 /* Roboto-Light.ttf */,
+				07B03BCF2764D81400763233 /* Roboto-Medium.ttf */,
+				07B03BD02764D81400763233 /* Roboto-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		07B03BD82764DF5300763233 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				07B03BD92764DF7500763233 /* OnBoardingPage.swift */,
+				07B03BDF2764EDC000763233 /* LoginPageView.swift */,
+				07B03BE42765D32300763233 /* CustomCorners.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		07B03BDB2764E01B00763233 /* AppSettings */ = {
+			isa = PBXGroup;
+			children = (
+				07B03BDC2764E03500763233 /* AppFonts.swift */,
+			);
+			path = AppSettings;
+			sourceTree = "<group>";
+		};
+		07B03BDE2764E25A00763233 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		07B03BE12764EDDD00763233 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				07B03BE22764EDF500763233 /* LoginPageModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		07B03BBC2764D5B900763233 /* ECommerceUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07B03BCB2764D5BC00763233 /* Build configuration list for PBXNativeTarget "ECommerceUI" */;
+			buildPhases = (
+				07B03BB92764D5B900763233 /* Sources */,
+				07B03BBA2764D5B900763233 /* Frameworks */,
+				07B03BBB2764D5B900763233 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ECommerceUI;
+			productName = ECommerceUI;
+			productReference = 07B03BBD2764D5B900763233 /* ECommerceUI.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		07B03BB52764D5B900763233 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					07B03BBC2764D5B900763233 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+				};
+			};
+			buildConfigurationList = 07B03BB82764D5B900763233 /* Build configuration list for PBXProject "ECommerceUI" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 07B03BB42764D5B900763233;
+			productRefGroup = 07B03BBE2764D5B900763233 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				07B03BBC2764D5B900763233 /* ECommerceUI */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		07B03BBB2764D5B900763233 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07B03BC82764D5BC00763233 /* Preview Assets.xcassets in Resources */,
+				07B03BC52764D5BC00763233 /* Assets.xcassets in Resources */,
+				07B03BD62764D81600763233 /* Roboto-Light.ttf in Resources */,
+				07B03BD52764D81600763233 /* Roboto-Bold.ttf in Resources */,
+				07B03BD42764D81600763233 /* Roboto-Regular.ttf in Resources */,
+				07B03BD32764D81600763233 /* Roboto-Medium.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		07B03BB92764D5B900763233 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07B03BDD2764E03500763233 /* AppFonts.swift in Sources */,
+				07B03BC32764D5B900763233 /* ContentView.swift in Sources */,
+				07B03BE32764EDF500763233 /* LoginPageModel.swift in Sources */,
+				07B03BDA2764DF7500763233 /* OnBoardingPage.swift in Sources */,
+				07B03BE02764EDC000763233 /* LoginPageView.swift in Sources */,
+				07B03BE52765D32300763233 /* CustomCorners.swift in Sources */,
+				07B03BC12764D5B900763233 /* ECommerceUIApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		07B03BC92764D5BC00763233 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		07B03BCA2764D5BC00763233 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		07B03BCC2764D5BC00763233 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ECommerceUI/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ECommerceUI/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.portonics.ECommerceUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		07B03BCD2764D5BC00763233 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ECommerceUI/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ECommerceUI/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.portonics.ECommerceUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		07B03BB82764D5B900763233 /* Build configuration list for PBXProject "ECommerceUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07B03BC92764D5BC00763233 /* Debug */,
+				07B03BCA2764D5BC00763233 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07B03BCB2764D5BC00763233 /* Build configuration list for PBXNativeTarget "ECommerceUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07B03BCC2764D5BC00763233 /* Debug */,
+				07B03BCD2764D5BC00763233 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 07B03BB52764D5B900763233 /* Project object */;
+}

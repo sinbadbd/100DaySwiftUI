@@ -15,7 +15,8 @@ struct ContentView: View {
         NavigationView{
             Group{
                 HomeTabView()
-            }.navigationBarTitle("Movies", displayMode: .automatic)
+            }
+            .navigationBarTitle("Movies", displayMode: .inline)
             .navigationBarItems(trailing: HStack{
                 SettingButton
             })
