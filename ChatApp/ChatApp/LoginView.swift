@@ -6,13 +6,31 @@
 //
 
 import SwiftUI
+import Firebase
+import FirebaseAuth
 
+class FirebaseManager: NSObject {
+    
+    let auth: Auth
+    static let shared = FirebaseManager()
+    override init(){
+        FirebaseApp.configure()
+        self.auth = Auth.auth()
+        super.init()
+    }
+}
+                                 
 struct LoginView: View {
+    
+    init(){
+        
+    }
     
     @State var isLoginMode = false
     
     @State var email = ""
     @State var password = ""
+    @State var loginStatusMessage = ""
     
     var body: some View {
         NavigationView{
@@ -61,7 +79,7 @@ struct LoginView: View {
                         }.background(Color.blue)
                     }.padding()
                     
-                    Text("Here is my create account page")
+                    Text(self.loginStatusMessage).foregroundColor(Color.red)
                 }
             }
             .navigationTitle(isLoginMode ? "Login" : "Create Account")
@@ -77,8 +95,29 @@ struct LoginView: View {
     private func handleAction(){
         if isLoginMode {
             print("login into firebase")
+            loginAccount()
         }else {
             print("Register into firebase")
+            createNewAccount()
+        }
+    }
+    private func loginAccount(){
+        FirebaseManager.shared.auth.signIn(withEmail: email, password: password) { authResult, error in
+            if let error = error {
+                self.loginStatusMessage = "Failed \(error)"
+                return
+            }
+            self.loginStatusMessage = "Successfully Login \(authResult?.user.uid)"
+        }
+    }
+    private func createNewAccount(){
+        FirebaseManager.shared.auth.createUser(withEmail: email, password: password) { authResult, error in
+            if let error = error {
+                self.loginStatusMessage = "Failed \(error)"
+                return
+            }
+            print("Successfully create user \(authResult?.user.uid)")
+            self.loginStatusMessage = "Successfully create user \(authResult?.user.uid)"
         }
     }
 }
