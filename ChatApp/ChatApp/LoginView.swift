@@ -6,20 +6,7 @@
 //
 
 import SwiftUI
-import Firebase
-import FirebaseAuth
-
-class FirebaseManager: NSObject {
-    
-    let auth: Auth
-    static let shared = FirebaseManager()
-    override init(){
-        FirebaseApp.configure()
-        self.auth = Auth.auth()
-        super.init()
-    }
-}
-                                 
+ 
 struct LoginView: View {
     
     init(){
@@ -31,6 +18,9 @@ struct LoginView: View {
     @State var email = ""
     @State var password = ""
     @State var loginStatusMessage = ""
+    
+    @State var shouldShowImagePicker = false
+    @State var image: UIImage?
     
     var body: some View {
         NavigationView{
@@ -46,11 +36,25 @@ struct LoginView: View {
                     
                     if !isLoginMode {
                         Button {
-                            
+                            shouldShowImagePicker.toggle()
                         } label: {
-                            Image(systemName: "person.fill")
-                                .font(.system(size: 64))
-                                .padding()
+                            VStack {
+                                if let image = self.image {
+                                    Image(uiImage: image)
+                                        .resizable()
+                                        .scaledToFill()
+                                        .frame(width: 128, height: 128)
+                                        .cornerRadius(64)
+                                }else {
+                                    
+                                    Image(systemName: "person.fill")
+                                        .font(.system(size: 64))
+                                        .padding()
+                                }
+                            }
+                            .overlay(RoundedRectangle(cornerRadius: 64)
+                                        .stroke(Color.black, lineWidth: 3)
+                            )
                         }
                     }
                     
@@ -87,9 +91,14 @@ struct LoginView: View {
                             .ignoresSafeArea())
             
 
-        }
+        }.navigationViewStyle(StackNavigationViewStyle())
+            .fullScreenCover(isPresented: $shouldShowImagePicker, onDismiss: nil) {
+                ImagePicker(image: $image)
+            }
         
     }
+    
+  
     
     
     private func handleAction(){
@@ -118,6 +127,43 @@ struct LoginView: View {
             }
             print("Successfully create user \(authResult?.user.uid)")
             self.loginStatusMessage = "Successfully create user \(authResult?.user.uid)"
+            persistImageStore()
+        }
+    }
+    private func persistImageStore(){
+        let fileName = UUID().uuidString
+        guard let uid = FirebaseManager.shared.auth.currentUser?.uid else { return }
+        
+        let ref = FirebaseManager.shared.storage.reference(withPath: uid)
+        guard let imageData = self.image?.jpegData(compressionQuality: 0.2) else { return }
+        
+        ref.putData(imageData, metadata: nil) { result, error in
+            if let error = error {
+                print(error.localizedDescription)
+                return
+            }
+            ref.downloadURL { url, err in
+                if let err = err {
+                    return
+                }
+                print(url?.absoluteURL)
+                guard let url = url else {return} 
+                self.storeUserInformation(imageProfileUrl: url)
+            }
+            
+        }
+    }
+    
+    private func storeUserInformation(imageProfileUrl: URL){
+        guard let uid = FirebaseManager.shared.auth.currentUser?.uid else { return }
+        let userData = ["email": self.email, "uid" : uid, "profileImage": imageProfileUrl.absoluteString]
+        
+        FirebaseManager.shared.fireStore.collection("users").document(uid).setData(userData) { error in
+            if let error = error {
+                print(error.localizedDescription)
+                return
+            }
+            print("success")
         }
     }
 }
