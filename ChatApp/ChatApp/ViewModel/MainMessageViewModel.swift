@@ -27,7 +27,6 @@ class MainMessageViewModel: ObservableObject {
          self.errorMessage = "Could not find firebase uid"
          return
      }
-        //self.errorMessage = "\(uid)"
         FirebaseManager.shared.fireStore.collection("users")
             .document(uid)
             .getDocument { snapshot, error in
@@ -38,11 +37,7 @@ class MainMessageViewModel: ObservableObject {
                 
                 guard let data = snapshot?.data() else { return }
                 print(data)
-                let uid = data["uid"] as? String ?? ""
-                let email = data["email"] as? String ?? ""
-                let profileImageURL = data["profileImage"] as? String ?? ""
-                let chatUser = ChatUser(uid: uid, email: email, profileImageURL: profileImageURL)
-                self.chatUser = chatUser
+                self.chatUser = .init(dic: data)
             }
     }
     

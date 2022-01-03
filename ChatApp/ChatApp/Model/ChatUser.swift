@@ -11,4 +11,9 @@ struct ChatUser {
     let email: String?
     let profileImageURL: String?
 
+    init(dic: [String: Any]) {
+        self.uid = dic["uid"] as? String ?? ""
+        self.email = dic["email"] as? String ?? ""
+        self.profileImageURL = dic["profileImage"] as? String ?? ""
+    }
 }
