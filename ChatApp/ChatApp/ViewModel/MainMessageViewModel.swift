@@ -11,12 +11,18 @@ class MainMessageViewModel: ObservableObject {
     
     @Published var errorMessage = ""
     @Published var chatUser : ChatUser?
+    @Published var isUserShowLogOutUser = false
     
     init(){
+        DispatchQueue.main.async {
+            self.isUserShowLogOutUser = FirebaseManager.shared.auth.currentUser?.uid == nil
+            print("self.isUserShowLogOutUser: \(self.isUserShowLogOutUser)")
+        }
+        
         fetchCurrentUser()
     }
     
-    private func fetchCurrentUser(){
+    func fetchCurrentUser(){
      guard let uid =  FirebaseManager.shared.auth.currentUser?.uid  else {
          self.errorMessage = "Could not find firebase uid"
          return
@@ -38,5 +44,10 @@ class MainMessageViewModel: ObservableObject {
                 let chatUser = ChatUser(uid: uid, email: email, profileImageURL: profileImageURL)
                 self.chatUser = chatUser
             }
+    }
+    
+    func handleSignout(){
+        isUserShowLogOutUser.toggle()
+        try? FirebaseManager.shared.auth.signOut()
     }
 }

@@ -9,9 +9,7 @@ import SwiftUI
  
 struct LoginView: View {
     
-    init(){
-        
-    }
+    let didCompleteLoginCompletion: () -> ()
     
     @State var isLoginMode = false
     
@@ -117,9 +115,14 @@ struct LoginView: View {
                 return
             }
             self.loginStatusMessage = "Successfully Login \(authResult?.user.uid)"
+            self.didCompleteLoginCompletion()
         }
     }
     private func createNewAccount(){
+         if self.image == nil {
+            loginStatusMessage = "Please seclect image "
+             return
+        }
         FirebaseManager.shared.auth.createUser(withEmail: email, password: password) { authResult, error in
             if let error = error {
                 self.loginStatusMessage = "Failed \(error)"
@@ -128,10 +131,10 @@ struct LoginView: View {
             print("Successfully create user \(authResult?.user.uid)")
             self.loginStatusMessage = "Successfully create user \(authResult?.user.uid)"
             persistImageStore()
+            self.didCompleteLoginCompletion()
         }
     }
     private func persistImageStore(){
-        let fileName = UUID().uuidString
         guard let uid = FirebaseManager.shared.auth.currentUser?.uid else { return }
         
         let ref = FirebaseManager.shared.storage.reference(withPath: uid)
@@ -168,8 +171,8 @@ struct LoginView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        LoginView()
-    }
-}
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        LoginView(didCompleteLoginCompletion: nil)
+//    }
+//}

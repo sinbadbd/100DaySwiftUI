@@ -67,9 +67,16 @@ struct MainMessagesView: View {
             .init(title: Text("Settings"), message: Text("What do you want to do?"), buttons: [
                 .destructive(Text("Sign Out"), action: {
                     print("handle sign out")
+                    vm.handleSignout()
                 }),
                 .cancel()
             ])
+        }
+        .fullScreenCover(isPresented: $vm.isUserShowLogOutUser) {
+            LoginView(didCompleteLoginCompletion: {
+                self.vm.isUserShowLogOutUser = false
+                self.vm.fetchCurrentUser()
+            })
         }
     }
     

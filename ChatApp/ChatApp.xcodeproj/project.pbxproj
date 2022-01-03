@@ -86,6 +86,15 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		07A2579A27835F6E004B701F /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				071FB9882781D2BD00C65240 /* FirebaseManager.swift */,
+				07D77AA4278173E500FF137B /* ImagePicker.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 		07CF9797277B70B000B3F80C = {
 			isa = PBXGroup;
 			children = (
@@ -106,10 +115,9 @@
 		07CF97A2277B70B000B3F80C /* ChatApp */ = {
 			isa = PBXGroup;
 			children = (
+				07A2579A27835F6E004B701F /* Manager */,
 				071FB990278220E500C65240 /* ViewModel */,
 				071FB98F278220DE00C65240 /* Model */,
-				071FB9882781D2BD00C65240 /* FirebaseManager.swift */,
-				07D77AA4278173E500FF137B /* ImagePicker.swift */,
 				07CF97A3277B70B000B3F80C /* ChatAppApp.swift */,
 				07CF97A5277B70B000B3F80C /* LoginView.swift */,
 				07CF97A7277B70B400B3F80C /* Assets.xcassets */,
