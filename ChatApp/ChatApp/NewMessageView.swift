@@ -9,8 +9,8 @@ import SwiftUI
 
 struct NewMessageView: View {
     
-    
-    
+     @Environment(\.presentationMode) var presentationMode
+
     var body: some View {
         NavigationView {
             ScrollView {
@@ -21,7 +21,7 @@ struct NewMessageView: View {
                 .toolbar {
                     ToolbarItemGroup(placement: .navigationBarLeading) {
                         Button{
-                            
+                            presentationMode.wrappedValue.dismiss()
                         } label: {
                           Text("Cancel")
                         }
