@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		071FB9892781D2BD00C65240 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071FB9882781D2BD00C65240 /* FirebaseManager.swift */; };
-		071FB98C2781E34500C65240 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 071FB98B2781E34500C65240 /* SDWebImageSwiftUI */; };
 		071FB98E2781E70E00C65240 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071FB98D2781E70E00C65240 /* extensions.swift */; };
 		071FB992278220F400C65240 /* MainMessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071FB991278220F400C65240 /* MainMessageViewModel.swift */; };
 		071FB9942782211800C65240 /* ChatUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071FB9932782211800C65240 /* ChatUser.swift */; };
+		078913152793510C00867E2E /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 078913142793510C00867E2E /* SDWebImageSwiftUI */; };
 		079007852784C003003C1E3A /* NewMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079007842784C003003C1E3A /* NewMessageView.swift */; };
 		07CF97A4277B70B000B3F80C /* ChatAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CF97A3277B70B000B3F80C /* ChatAppApp.swift */; };
 		07CF97A6277B70B000B3F80C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CF97A5277B70B000B3F80C /* LoginView.swift */; };
@@ -54,7 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				071FB98C2781E34500C65240 /* SDWebImageSwiftUI in Frameworks */,
+				078913152793510C00867E2E /* SDWebImageSwiftUI in Frameworks */,
 				07D77AB62781806800FF137B /* FirebaseMessaging in Frameworks */,
 				07D77AB02781806800FF137B /* FirebaseDatabase in Frameworks */,
 				07D77AB82781806800FF137B /* FirebasePerformance in Frameworks */,
@@ -167,7 +167,7 @@
 				07D77AB72781806800FF137B /* FirebasePerformance */,
 				07D77AB92781806800FF137B /* FirebaseRemoteConfig */,
 				07D77ABB2781806800FF137B /* FirebaseStorage */,
-				071FB98B2781E34500C65240 /* SDWebImageSwiftUI */,
+				078913142793510C00867E2E /* SDWebImageSwiftUI */,
 			);
 			productName = ChatApp;
 			productReference = 07CF97A0277B70B000B3F80C /* ChatApp.app */;
@@ -199,7 +199,7 @@
 			mainGroup = 07CF9797277B70B000B3F80C;
 			packageReferences = (
 				07D77AA62781806800FF137B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-				071FB98A2781E34500C65240 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				078913132793510C00867E2E /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = 07CF97A1277B70B000B3F80C /* Products */;
 			projectDirPath = "";
@@ -441,12 +441,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		071FB98A2781E34500C65240 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+		078913132793510C00867E2E /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
+				branch = master;
+				kind = branch;
 			};
 		};
 		07D77AA62781806800FF137B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
@@ -460,9 +460,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		071FB98B2781E34500C65240 /* SDWebImageSwiftUI */ = {
+		078913142793510C00867E2E /* SDWebImageSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 071FB98A2781E34500C65240 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			package = 078913132793510C00867E2E /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
 			productName = SDWebImageSwiftUI;
 		};
 		07D77AA72781806800FF137B /* FirebaseAnalytics */ = {
