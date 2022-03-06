@@ -23,10 +23,10 @@ class MainMessageViewModel: ObservableObject {
     }
     
     func fetchCurrentUser(){
-     guard let uid =  FirebaseManager.shared.auth.currentUser?.uid  else {
-         self.errorMessage = "Could not find firebase uid"
-         return
-     }
+        guard let uid =  FirebaseManager.shared.auth.currentUser?.uid  else {
+            self.errorMessage = "Could not find firebase uid"
+            return
+        }
         FirebaseManager.shared.fireStore.collection("users")
             .document(uid)
             .getDocument { snapshot, error in
