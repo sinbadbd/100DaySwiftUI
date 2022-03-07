@@ -6,10 +6,10 @@
 //
 
 import Foundation
-struct ChatUser {
-    let uid: String?
-    let email: String?
-    let profileImageURL: String?
+struct ChatUser: Identifiable {
+    var id : String { uid ?? "" }
+    
+    let uid, email, profileImageURL: String?
 
     init(dic: [String: Any]) {
         self.uid = dic["uid"] as? String ?? ""

@@ -131,7 +131,7 @@ struct MainMessagesView: View {
             .padding(.horizontal)
             .shadow(radius: 15)
         }.fullScreenCover(isPresented: $shouldShowNewMessageScreen) {
-            NewMessageView()
+            CreateNewMessageView()
         }
     }
 }
