@@ -43,25 +43,33 @@ struct CreateNewMessageView: View {
     
     @ObservedObject var vm = CreateNewMessageViewModel()
     
+    let didSelecNewUser: (ChatUser) -> ()
+    
     var body: some View {
         NavigationView {
             ScrollView {
                 ForEach(vm.user) { users in
-                    HStack(spacing: 8) {
-                        WebImage(url: URL(string: "\(users.profileImageURL ?? "user")"))
-                            .resizable()
-                            .scaledToFill()
-                            .frame(width: 40, height: 40)
-                            .cornerRadius(20)
-                            .overlay(RoundedRectangle(cornerRadius: 20)
-                                        .stroke(Color(.label), lineWidth: 1)
-                            )
-                            .frame(width: 60, height: 60, alignment: .leading)
-                        Text(users.email ?? "")
-                        Spacer(minLength: 8)
-                    }.padding(.horizontal)
-                    Divider()
-                        .padding(.vertical, 8)
+                    Button {
+                        presentationMode.wrappedValue.dismiss()
+                        didSelecNewUser(users)
+                    } label: {
+                        HStack(spacing: 8) {
+                            WebImage(url: URL(string: "\(users.profileImageURL ?? "user")"))
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width: 40, height: 40)
+                                .cornerRadius(20)
+                                .overlay(RoundedRectangle(cornerRadius: 20)
+                                            .stroke(Color(.label), lineWidth: 1)
+                                )
+                                .frame(width: 60, height: 60, alignment: .leading)
+                            Text(users.email ?? "")
+                            Spacer(minLength: 8)
+                        }.padding(.horizontal)
+                        Divider()
+                            .padding(.vertical, 8)
+                    }
+
                 }
             }.navigationTitle("New Message")
                 .toolbar {
@@ -77,8 +85,8 @@ struct CreateNewMessageView: View {
     }
 }
 
-struct CreateNewMessageView_Previews: PreviewProvider {
-    static var previews: some View {
-        CreateNewMessageView()
-    }
-}
+//struct CreateNewMessageView_Previews: PreviewProvider {
+//    static var previews: some View {
+////        CreateNewMessageView(, didSelecNewUser: <#(ChatUser) -> ()#>)
+//    }
+//}

@@ -13,12 +13,18 @@ struct MainMessagesView: View {
     @ObservedObject private var vm = MainMessageViewModel()
     @State var shouldShowLogOutOptions = false
     @State var shouldShowNewMessageScreen = false
+    @State var chatUser: ChatUser?
+
+    @State var shouldNavigationToggle = false
     
     var body: some View {
         NavigationView {
             VStack {
                 customNavBar
                 messagesView
+                NavigationLink("", isActive: $shouldNavigationToggle) {
+                    ChatLoginView(chatUser: chatUser)
+                 }
             }
             .overlay(
                 newMessageButton, alignment: .bottom)
@@ -85,36 +91,43 @@ struct MainMessagesView: View {
         ScrollView {
             ForEach(0..<10, id: \.self) { num in
                 VStack {
-                    HStack(spacing: 16) {
-                        Image(systemName: "person.fill")
-                            .font(.system(size: 32))
-                            .padding(8)
-                            .overlay(RoundedRectangle(cornerRadius: 44)
-                                        .stroke(Color(.label), lineWidth: 1)
-                            )
+                    NavigationLink {
                         
-                        
-                        VStack(alignment: .leading) {
-                            Text("Username")
-                                .font(.system(size: 16, weight: .bold))
-                            Text("Message sent to user")
-                                .font(.system(size: 14))
-                                .foregroundColor(Color(.lightGray))
+                    } label: {
+                        HStack(spacing: 16) {
+                            Image(systemName: "person.fill")
+                                .font(.system(size: 32))
+                                .padding(8)
+                                .overlay(RoundedRectangle(cornerRadius: 44)
+                                            .stroke(Color(.label), lineWidth: 1)
+                                )
+                            
+                            
+                            VStack(alignment: .leading) {
+                                Text("Username")
+                                    .font(.system(size: 16, weight: .bold))
+                                Text("Message sent to user")
+                                    .font(.system(size: 14))
+                                    .foregroundColor(Color(.lightGray))
+                            }
+                            Spacer()
+                            
+                            Text("22d")
+                                .font(.system(size: 14, weight: .semibold))
                         }
-                        Spacer()
-                        
-                        Text("22d")
-                            .font(.system(size: 14, weight: .semibold))
+                        Divider()
+                            .padding(.vertical, 8)
+                    }.padding(.horizontal)
                     }
-                    Divider()
-                        .padding(.vertical, 8)
-                }.padding(.horizontal)
+
                 
             }.padding(.bottom, 50)
         }
     }
     
     private var newMessageButton: some View {
+        
+        
         Button {
             self.shouldShowNewMessageScreen.toggle()
         } label: {
@@ -131,8 +144,28 @@ struct MainMessagesView: View {
             .padding(.horizontal)
             .shadow(radius: 15)
         }.fullScreenCover(isPresented: $shouldShowNewMessageScreen) {
-            CreateNewMessageView()
+            CreateNewMessageView( didSelecNewUser: { user in
+                print(user.email)
+                self.shouldNavigationToggle.toggle()
+                self.chatUser = user
+            })
         }
+    }
+}
+
+struct ChatLoginView: View {
+    
+    var chatUser: ChatUser?
+    
+    var body: some View {
+        ScrollView{
+            ForEach(0..<5){_ in
+                Text("Test")
+            }
+            
+        }.navigationTitle(chatUser?.email ?? "")
+            .navigationBarTitleDisplayMode(.inline)
+ //            .navigationDisplayMode(.)
     }
 }
 
