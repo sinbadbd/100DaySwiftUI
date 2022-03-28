@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D2BAF9127F208F000AB669C /* CoinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2BAF9027F208F000AB669C /* CoinModel.swift */; };
 		1D616D3927EA1F400024A002 /* CryptoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D616D3827EA1F400024A002 /* CryptoApp.swift */; };
 		1D616D3B27EA1F400024A002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D616D3A27EA1F400024A002 /* ContentView.swift */; };
 		1D616D3D27EA1F440024A002 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D616D3C27EA1F440024A002 /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D2BAF9027F208F000AB669C /* CoinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinModel.swift; sourceTree = "<group>"; };
 		1D616D3527EA1F400024A002 /* Crypto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crypto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D616D3827EA1F400024A002 /* CryptoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoApp.swift; sourceTree = "<group>"; };
 		1D616D3A27EA1F400024A002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -54,6 +56,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D2BAF8F27F208CF00AB669C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1D2BAF9027F208F000AB669C /* CoinModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		1D616D2C27EA1F400024A002 = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +83,7 @@
 		1D616D3727EA1F400024A002 /* Crypto */ = {
 			isa = PBXGroup;
 			children = (
+				1D2BAF8F27F208CF00AB669C /* Models */,
 				1D616D5827EA3E990024A002 /* Core */,
 				1D616D4B27EA3DA50024A002 /* Extensions */,
 				1D616D3827EA1F400024A002 /* CryptoApp.swift */,
@@ -232,6 +243,7 @@
 				1D616D6127EA41E60024A002 /* CircleButton.swift in Sources */,
 				1D616D5727EA3DA60024A002 /* Color.swift in Sources */,
 				1D616D6327EA49210024A002 /* CircleButtonAnimationView.swift in Sources */,
+				1D2BAF9127F208F000AB669C /* CoinModel.swift in Sources */,
 				1D616D5527EA3DA60024A002 /* Double.swift in Sources */,
 				1D616D5D27EA3F920024A002 /* HomeView.swift in Sources */,
 				1D616D5227EA3DA60024A002 /* Date.swift in Sources */,
