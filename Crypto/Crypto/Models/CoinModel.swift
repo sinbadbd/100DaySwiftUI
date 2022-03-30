@@ -10,35 +10,35 @@ import Foundation
  
 struct CoinModel: Identifiable, Codable {
 
-      var id                                 : String?        = nil
-      var symbol                             : String?        = nil
-      var name                               : String?        = nil
-      var image                              : Double?        = nil
-      var currentPrice                       : Int?           = nil
-      var marketCap                          : Int?           = nil
-      var marketCapRank                      : Int?           = nil
-      var fullyDilutedValuation              : Int?           = nil
-      var totalVolume                        : Int?           = nil
-      var high24h                            : Int?           = nil
-      var low24h                             : Int?           = nil
-      var priceChange24h                     : Double?        = nil
-      var priceChangePercentage24h           : Double?        = nil
-      var marketCapChange24h                 : Int?           = nil
-      var marketCapChangePercentage24h       : Double?        = nil
-      var circulatingSupply                  : Int?           = nil
-      var totalSupply                        : Int?           = nil
-      var maxSupply                          : Int?           = nil
-      var ath                                : Int?           = nil
-      var athChangePercentage                : Double?        = nil
-      var athDate                            : String?        = nil
-      var atl                                : Double?        = nil
-      var atlChangePercentage                : Double?        = nil
-      var atlDate                            : String?        = nil
-      var roi                                : String?        = nil
-      var lastUpdated                        : String?        = nil
+      var id                                 : String?
+      var symbol                             : String?
+      var name                               : String?
+      var image                              : String?
+      var currentPrice                       : Double?
+      var marketCap                          : Int?
+      var marketCapRank                      : Int?
+      var fullyDilutedValuation              : Int?
+      var totalVolume                        : Int?
+      var high24h                            : Int?
+      var low24h                             : Int?
+      var priceChange24h                     : Double?
+      var priceChangePercentage24h           : Double?
+      var marketCapChange24h                 : Double?
+      var marketCapChangePercentage24h       : Double?
+      var circulatingSupply                  : Int?
+      var totalSupply                        : Int?
+      var maxSupply                          : Int?
+      var ath                                : Int?
+      var athChangePercentage                : Double?
+      var athDate                            : String?
+      var atl                                : Double?
+      var atlChangePercentage                : Double?
+      var atlDate                            : String?
+      var roi                                : String?
+      var lastUpdated                        : String?
       var sparklineIn7d                      : SparklineIn7d? = SparklineIn7d()
-      var priceChangePercentage24hInCurrency : Double?        = nil
-      var currentHoldings                    : Double?        = 0
+      var priceChangePercentage24hInCurrency : Double?
+      var currentHoldings                    : Double?
         
       enum CodingKeys: String, CodingKey {
 
@@ -77,6 +77,13 @@ struct CoinModel: Identifiable, Codable {
         return CoinModel(id: id, symbol: symbol, name: name, image: image, currentPrice: currentPrice, marketCap: marketCap, marketCapRank: marketCapRank, fullyDilutedValuation: fullyDilutedValuation, totalVolume: totalVolume, high24h: high24h, low24h: low24h, priceChange24h: priceChange24h, priceChangePercentage24h: priceChangePercentage24h, marketCapChange24h: marketCapChange24h, marketCapChangePercentage24h: marketCapChangePercentage24h, circulatingSupply: circulatingSupply, totalSupply: totalSupply, maxSupply: maxSupply, ath: ath, athChangePercentage: athChangePercentage, athDate: athDate, atl: atl, atlChangePercentage: atlChangePercentage, atlDate: atlDate, roi: roi, lastUpdated: lastUpdated, sparklineIn7d: sparklineIn7d, priceChangePercentage24hInCurrency: priceChangePercentage24hInCurrency, currentHoldings: amount)
     }
     
+    var currentHoldingValue: Double {
+        return (currentHoldings ?? 0.0) * (currentPrice ?? 0)
+    }
+    
+    var rank: Int {
+        return Int(marketCapRank ?? 0)
+    }
     
 }
 
