@@ -33,16 +33,15 @@ class DeveloperPreview {
        name: "Bitcoin",
        image: "https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1547033579",
        currentPrice: 61408,
-       marketCap: 1141731099010,
-       marketCapRank: 1,
+       marketCapRank: 1, marketCap: 1141731099010,
        fullyDilutedValuation: 1285385611303,
        totalVolume: 67190952980,
-       high24h: 61712,
-       low24h: 56220,
-       priceChange24h: 3952.64,
-       priceChangePercentage24h: 6.87944,
-       marketCapChange24h: 72110681879,
-       marketCapChangePercentage24h: 6.74171,
+       high24H: 61712,
+       low24H: 56220,
+       priceChange24H: 3952.64,
+       priceChangePercentage24H: 6.87944,
+       marketCapChange24H: 72110681879,
+       marketCapChangePercentage24H: 6.74171,
        circulatingSupply: 18653043,
        totalSupply: 21000000,
        maxSupply: 21000000,
@@ -53,7 +52,7 @@ class DeveloperPreview {
        atlChangePercentage: 90020.24075,
        atlDate: "2013-07-06T00:00:00.000Z",
        lastUpdated: "2021-03-13T23:18:10.268Z",
-       sparklineIn7d: SparklineIn7d(price: [
+       sparklineIn7D: SparklineIn7d(price: [
         54019.26878317463,
         53718.060935791524,
         53677.12968669343,
@@ -224,7 +223,7 @@ class DeveloperPreview {
         57336.828870254896
         
        ]),
-       priceChangePercentage24hInCurrency: 3952.64,
+       priceChangePercentage24HInCurrency: 3952.64,
        currentHoldings: 1.5)
     
 }
