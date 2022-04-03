@@ -10,8 +10,7 @@ import SwiftUI
 struct HomeView: View {
     
     @EnvironmentObject private var vm: HomeVieModel
-    
-    
+     
     @State private var showPortfolio: Bool = false
     
     var body: some View {
@@ -23,6 +22,11 @@ struct HomeView: View {
             VStack{
                 homeHeader
                 ColumnTitle
+                
+                if !showPortfolio{
+                    SearchBarView(searchText: $vm.searchText)
+                }
+                
                 if !showPortfolio {
                     allCoinList
                         .transition(.move(edge: .leading))
