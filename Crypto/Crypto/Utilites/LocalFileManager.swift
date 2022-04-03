@@ -32,7 +32,6 @@ class LocalFileManager {
         guard let url = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first else {
             return nil
         }
-       // print("get url for folder: \(url)")
         return url.appendingPathComponent(folderName)
     }
      
@@ -40,13 +39,11 @@ class LocalFileManager {
         guard let folderURL = getURLForFolder(folderName: folderName) else {
             return nil
         }
-       // print("get url getURLForImage: \(folderURL)")
         return folderURL.appendingPathComponent(imageName+".png")
     }
     
     private func createFolderIfneed(folderName: String){
         guard let url = getURLForFolder(folderName: folderName) else { return }
-        //print("iamge-url:- \(url)")
         if !FileManager.default.fileExists(atPath: url.path) {
             do {
                 try FileManager.default.createDirectory(at: url, withIntermediateDirectories: true)
