@@ -21,12 +21,11 @@ struct HomeView: View {
             //
             VStack{
                 homeHeader
+                HomeStatView(showProtfolio: $showPortfolio)
+                //if !showPortfolio{
+                SearchBarView(searchText: $vm.searchText)
+                //}
                 ColumnTitle
-                
-                if !showPortfolio{
-                    SearchBarView(searchText: $vm.searchText)
-                }
-                
                 if !showPortfolio {
                     allCoinList
                         .transition(.move(edge: .leading))
