@@ -15,6 +15,8 @@
 		1D2D9F3D27FD9FB400C3E477 /* StatisticModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2D9F3C27FD9FB400C3E477 /* StatisticModel.swift */; };
 		1D2D9F3F27FDA08A00C3E477 /* StatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2D9F3E27FDA08A00C3E477 /* StatisticView.swift */; };
 		1D2D9F4127FDA4D000C3E477 /* HomeStatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2D9F4027FDA4D000C3E477 /* HomeStatView.swift */; };
+		1D2D9F4328017EB000C3E477 /* MarketDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2D9F4228017EB000C3E477 /* MarketDataModel.swift */; };
+		1D2D9F452801A62900C3E477 /* MarketdataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2D9F442801A62900C3E477 /* MarketdataService.swift */; };
 		1D616D3927EA1F400024A002 /* CryptoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D616D3827EA1F400024A002 /* CryptoApp.swift */; };
 		1D616D3B27EA1F400024A002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D616D3A27EA1F400024A002 /* ContentView.swift */; };
 		1D616D3D27EA1F440024A002 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D616D3C27EA1F440024A002 /* Assets.xcassets */; };
@@ -47,6 +49,8 @@
 		1D2D9F3C27FD9FB400C3E477 /* StatisticModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticModel.swift; sourceTree = "<group>"; };
 		1D2D9F3E27FDA08A00C3E477 /* StatisticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticView.swift; sourceTree = "<group>"; };
 		1D2D9F4027FDA4D000C3E477 /* HomeStatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStatView.swift; sourceTree = "<group>"; };
+		1D2D9F4228017EB000C3E477 /* MarketDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketDataModel.swift; sourceTree = "<group>"; };
+		1D2D9F442801A62900C3E477 /* MarketdataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketdataService.swift; sourceTree = "<group>"; };
 		1D616D3527EA1F400024A002 /* Crypto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crypto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D616D3827EA1F400024A002 /* CryptoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoApp.swift; sourceTree = "<group>"; };
 		1D616D3A27EA1F400024A002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -87,6 +91,7 @@
 			children = (
 				1D2BAF9027F208F000AB669C /* CoinModel.swift */,
 				1D2D9F3C27FD9FB400C3E477 /* StatisticModel.swift */,
+				1D2D9F4228017EB000C3E477 /* MarketDataModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -96,6 +101,7 @@
 			children = (
 				1D2BAF9727F5E81900AB669C /* CoinDataService.swift */,
 				1DD60FFF27F7302300CD9AC0 /* CoinImageService.swift */,
+				1D2D9F442801A62900C3E477 /* MarketdataService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -315,6 +321,7 @@
 				1D2D9F4127FDA4D000C3E477 /* HomeStatView.swift in Sources */,
 				1DB5103A27F9B16F00F664EF /* SearchBarView.swift in Sources */,
 				1D2BAF9527F4AE0400AB669C /* HomeViewModel.swift in Sources */,
+				1D2D9F4328017EB000C3E477 /* MarketDataModel.swift in Sources */,
 				1D616D6127EA41E60024A002 /* CircleButton.swift in Sources */,
 				1D616D5727EA3DA60024A002 /* Color.swift in Sources */,
 				1D616D6327EA49210024A002 /* CircleButtonAnimationView.swift in Sources */,
@@ -328,6 +335,7 @@
 				1D2BAF9B27F5E8A600AB669C /* Api + URL.swift in Sources */,
 				1D616D4227EA1F440024A002 /* Persistence.swift in Sources */,
 				1D616D5427EA3DA60024A002 /* String.swift in Sources */,
+				1D2D9F452801A62900C3E477 /* MarketdataService.swift in Sources */,
 				1D2BAF9327F2116500AB669C /* CoinRowView.swift in Sources */,
 				1D616D3B27EA1F400024A002 /* ContentView.swift in Sources */,
 				1D2D9F3F27FDA08A00C3E477 /* StatisticView.swift in Sources */,
