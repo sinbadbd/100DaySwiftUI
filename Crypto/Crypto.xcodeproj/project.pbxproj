@@ -17,6 +17,8 @@
 		1D2D9F4127FDA4D000C3E477 /* HomeStatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2D9F4027FDA4D000C3E477 /* HomeStatView.swift */; };
 		1D2D9F4328017EB000C3E477 /* MarketDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2D9F4228017EB000C3E477 /* MarketDataModel.swift */; };
 		1D2D9F452801A62900C3E477 /* MarketdataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2D9F442801A62900C3E477 /* MarketdataService.swift */; };
+		1D2D9F472801F57900C3E477 /* PortfolioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2D9F462801F57900C3E477 /* PortfolioView.swift */; };
+		1D2D9F4928021B8400C3E477 /* XButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2D9F4828021B8400C3E477 /* XButtonView.swift */; };
 		1D616D3927EA1F400024A002 /* CryptoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D616D3827EA1F400024A002 /* CryptoApp.swift */; };
 		1D616D3B27EA1F400024A002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D616D3A27EA1F400024A002 /* ContentView.swift */; };
 		1D616D3D27EA1F440024A002 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D616D3C27EA1F440024A002 /* Assets.xcassets */; };
@@ -51,6 +53,8 @@
 		1D2D9F4027FDA4D000C3E477 /* HomeStatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStatView.swift; sourceTree = "<group>"; };
 		1D2D9F4228017EB000C3E477 /* MarketDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketDataModel.swift; sourceTree = "<group>"; };
 		1D2D9F442801A62900C3E477 /* MarketdataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketdataService.swift; sourceTree = "<group>"; };
+		1D2D9F462801F57900C3E477 /* PortfolioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioView.swift; sourceTree = "<group>"; };
+		1D2D9F4828021B8400C3E477 /* XButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XButtonView.swift; sourceTree = "<group>"; };
 		1D616D3527EA1F400024A002 /* Crypto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crypto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D616D3827EA1F400024A002 /* CryptoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoApp.swift; sourceTree = "<group>"; };
 		1D616D3A27EA1F400024A002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -193,6 +197,7 @@
 				1D616D5C27EA3F920024A002 /* HomeView.swift */,
 				1D2BAF9227F2116500AB669C /* CoinRowView.swift */,
 				1D2D9F4027FDA4D000C3E477 /* HomeStatView.swift */,
+				1D2D9F462801F57900C3E477 /* PortfolioView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -213,6 +218,7 @@
 				1D616D5F27EA41D90024A002 /* CircleButton */,
 				1DB5103927F9B16F00F664EF /* SearchBarView.swift */,
 				1D2D9F3E27FDA08A00C3E477 /* StatisticView.swift */,
+				1D2D9F4828021B8400C3E477 /* XButtonView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -315,6 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D616D5627EA3DA60024A002 /* UIApplication.swift in Sources */,
+				1D2D9F472801F57900C3E477 /* PortfolioView.swift in Sources */,
 				1DD60FFE27F72EBF00CD9AC0 /* CoinImageView.swift in Sources */,
 				1D616D4527EA1F440024A002 /* Crypto.xcdatamodeld in Sources */,
 				1D616D5327EA3DA60024A002 /* PreviewProvider.swift in Sources */,
@@ -336,6 +343,7 @@
 				1D616D4227EA1F440024A002 /* Persistence.swift in Sources */,
 				1D616D5427EA3DA60024A002 /* String.swift in Sources */,
 				1D2D9F452801A62900C3E477 /* MarketdataService.swift in Sources */,
+				1D2D9F4928021B8400C3E477 /* XButtonView.swift in Sources */,
 				1D2BAF9327F2116500AB669C /* CoinRowView.swift in Sources */,
 				1D616D3B27EA1F400024A002 /* ContentView.swift in Sources */,
 				1D2D9F3F27FDA08A00C3E477 /* StatisticView.swift in Sources */,
