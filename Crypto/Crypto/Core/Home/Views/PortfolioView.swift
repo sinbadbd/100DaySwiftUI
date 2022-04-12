@@ -27,12 +27,17 @@ struct PortfolioView: View {
                 }
             }
             .navigationTitle("Edit Profile")
-            .toolbar {
+            .toolbar(content: {
                 ToolbarItem(placement: .navigationBarLeading){
                     XButtonView()
                 }
                 ToolbarItem(placement: .navigationBarTrailing){
                     tralingNavBar
+                }
+            })
+            .onChange(of: vm.searchText) { newValue in
+                if newValue == "" {
+                    removeSelectedCoin()
                 }
             }
         }
