@@ -11,19 +11,32 @@ import CoreData
 class PortfolioDataService  {
 
     private let container: NSPersistentContainer
-    private let containerName: String = "Crypto"
-    private let entityName: String = "PortfolioContainer"
+    private let containerName: String = "PortfolioContainer"
+    private let entityName: String = "PortfolioEntity"
     
     @Published var saveEntities: [PortfolioEntity] = []
     
     
     init(){
         container = NSPersistentContainer(name: containerName)
-        container.loadPersistentStores { _ , error in
+        container.loadPersistentStores { [self] _ , error in
             guard error != nil else {
                 print("Loading: \(error?.localizedDescription ?? "")")
                 return
             }
+            getPortfolio()
+        }
+    }
+    
+    public func updateCoin(coin: CoinModel, amount: Double){
+        if let entity = saveEntities.first(where: { $0.coinID == coin.id }){
+            if amount > 0 {
+                update(entity: entity, amount:  amount)
+            }else{
+                delete(entity: entity)
+            }
+        }else{
+            add(coin: coin, amount: amount)
         }
     }
     
