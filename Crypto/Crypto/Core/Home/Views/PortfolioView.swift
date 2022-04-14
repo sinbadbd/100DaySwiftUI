@@ -27,12 +27,17 @@ struct PortfolioView: View {
                 }
             }
             .navigationTitle("Edit Profile")
-            .toolbar {
+            .toolbar(content: {
                 ToolbarItem(placement: .navigationBarLeading){
                     XButtonView()
                 }
                 ToolbarItem(placement: .navigationBarTrailing){
                     tralingNavBar
+                }
+            })
+            .onChange(of: vm.searchText) { newValue in
+                if newValue == "" {
+                    removeSelectedCoin()
                 }
             }
         }
@@ -120,7 +125,11 @@ extension PortfolioView {
     
     
     private func saveButtonPressed(){
-        guard let coin = selecteCoin else { return }
+        guard let coin = selecteCoin,
+                let amount = Double(quantityText) else { return }
+        
+        vm.updatePortfolio(coin: coin, amount: amount)
+        
         
         //show checkmark
         withAnimation(.easeIn) {
