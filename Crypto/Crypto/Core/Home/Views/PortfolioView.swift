@@ -23,7 +23,7 @@ struct PortfolioView: View {
                     coinLogoList
                     if selecteCoin != nil {
                         portfolioInputSection
-                    }
+                     }
                 }
             }
             .navigationTitle("Edit Profile")
@@ -43,7 +43,6 @@ struct PortfolioView: View {
         }
     }
 }
-
 struct PortfolioView_Previews: PreviewProvider {
     static var previews: some View {
         PortfolioView()
@@ -56,12 +55,13 @@ extension PortfolioView {
         ScrollView(.horizontal, showsIndicators: false) {
             LazyHStack( spacing: 10) {
                 ForEach(vm.allCoins){ coin in
+                    //vm.searchText.isEmpty ? vm.protfolioCoins : vm.allCoins
                     CoinLogoView(coin: coin)
                         .frame(width: 75)
                         .padding(4)
                         .onTapGesture {
                             withAnimation(.easeIn){
-                                selecteCoin = coin
+                                updateSelectedCoin(coin: coin)
                             }
                         }
                         .background(
@@ -118,9 +118,18 @@ extension PortfolioView {
     private func getCurrentDouble() -> Double {
         if let qty = Double(quantityText)  {
             return qty * (selecteCoin?.currentPrice ?? 0)
-            
         }
         return 0
+    }
+    
+    private func updateSelectedCoin(coin: CoinModel){
+        selecteCoin = coin
+        if let portfolioCoin = vm.protfolioCoins.first(where: { $0.id == $0.id }),
+           let amount = portfolioCoin.currentHoldings {
+            quantityText = "\(amount)"
+        }else {
+            quantityText = ""
+        }
     }
     
     
@@ -129,8 +138,7 @@ extension PortfolioView {
                 let amount = Double(quantityText) else { return }
         
         vm.updatePortfolio(coin: coin, amount: amount)
-        
-        
+         
         //show checkmark
         withAnimation(.easeIn) {
             showCheckmark = true
@@ -146,8 +154,6 @@ extension PortfolioView {
                 showCheckmark =  false
             }
         }
-        
-        
     }
     
     private func removeSelectedCoin(){

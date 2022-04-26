@@ -39,6 +39,7 @@ class HomeVieModel: ObservableObject {
         
         //  MARK: update market data
         marketDataService.$marketData
+            .combineLatest($protfolioCoins)
             .map(mapGlobalMarketData)
             .sink { [weak self] resultStats in
                 self?.statistic  = resultStats
@@ -75,15 +76,20 @@ class HomeVieModel: ObservableObject {
         }
     }
     
-    private func mapGlobalMarketData(market: MarketDataModel?) -> [StatisticModel] {
+    private func mapGlobalMarketData(market: MarketDataModel?, protfolioCoins: [CoinModel]) -> [StatisticModel] {
         var stats: [StatisticModel] = []
         
         guard let data = market else { return stats }
         let marketCap = StatisticModel(title: "Market Cap", value: data.marketCap, percentageChage: data.marketCapChangePercentage24HUsd)
         let volume =  StatisticModel(title: "24h Volume", value: data.valume)
         let btcDominance = StatisticModel(title: "BTC Dominance", value: data.btcDominane)
-        let portfolio = StatisticModel(title: "Portfolio Value", value: "$0.0", percentageChage: 0)
         
+        let portfoiloValue = protfolioCoins
+            .map({ $0.currentHoldingValue })
+            .reduce(0, +)
+        
+        let portfolio = StatisticModel(title: "Portfolio Value", value: portfoiloValue.asCurrencyWith2Decimals(), percentageChage: 0)
+
         stats.append(contentsOf: [
             marketCap,
             volume,
