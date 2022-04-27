@@ -12,6 +12,7 @@
 		07A3964B27B40F1E005C178B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07A3964A27B40F1E005C178B /* Assets.xcassets */; };
 		07A3964E27B40F1E005C178B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07A3964D27B40F1E005C178B /* Preview Assets.xcassets */; };
 		07A3965627B40FC8005C178B /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A3965527B40FC8005C178B /* Home.swift */; };
+		1DCC6F9E281940C000796361 /* RotationOfArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCC6F9D281940BF00796361 /* RotationOfArray.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		07A3964A27B40F1E005C178B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07A3964D27B40F1E005C178B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		07A3965527B40FC8005C178B /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		1DCC6F9D281940BF00796361 /* RotationOfArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationOfArray.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 				07A3964827B40F1C005C178B /* ContentView.swift */,
 				07A3964A27B40F1E005C178B /* Assets.xcassets */,
 				07A3964C27B40F1E005C178B /* Preview Content */,
+				1DCC6F9D281940BF00796361 /* RotationOfArray.swift */,
 			);
 			path = AppleBedTime;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DCC6F9E281940C000796361 /* RotationOfArray.swift in Sources */,
 				07A3964927B40F1C005C178B /* ContentView.swift in Sources */,
 				07A3965627B40FC8005C178B /* Home.swift in Sources */,
 				07A3964727B40F1C005C178B /* AppleBedTimeApp.swift in Sources */,

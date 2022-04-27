@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1DA12EB22819A3090082E689 /* DownloadImageAsync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA12EB12819A3080082E689 /* DownloadImageAsync.swift */; };
 		1DCC6F8E2817C2A600796361 /* SwiftConcurencyBootcampApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCC6F8D2817C2A600796361 /* SwiftConcurencyBootcampApp.swift */; };
 		1DCC6F902817C2A600796361 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCC6F8F2817C2A600796361 /* ContentView.swift */; };
 		1DCC6F922817C2AA00796361 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DCC6F912817C2AA00796361 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1DA12EB12819A3080082E689 /* DownloadImageAsync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImageAsync.swift; sourceTree = "<group>"; };
 		1DCC6F8A2817C2A600796361 /* SwiftConcurencyBootcamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftConcurencyBootcamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DCC6F8D2817C2A600796361 /* SwiftConcurencyBootcampApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftConcurencyBootcampApp.swift; sourceTree = "<group>"; };
 		1DCC6F8F2817C2A600796361 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 				1DCC6F8F2817C2A600796361 /* ContentView.swift */,
 				1DCC6F912817C2AA00796361 /* Assets.xcassets */,
 				1DCC6F932817C2AA00796361 /* Preview Content */,
+				1DA12EB12819A3080082E689 /* DownloadImageAsync.swift */,
 			);
 			path = SwiftConcurencyBootcamp;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DA12EB22819A3090082E689 /* DownloadImageAsync.swift in Sources */,
 				1DCC6F9C2817C2D200796361 /* DoCatechTryThrowBootCamp.swift in Sources */,
 				1DCC6F902817C2A600796361 /* ContentView.swift in Sources */,
 				1DCC6F8E2817C2A600796361 /* SwiftConcurencyBootcampApp.swift in Sources */,
