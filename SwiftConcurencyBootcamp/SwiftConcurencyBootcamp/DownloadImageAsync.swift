@@ -9,18 +9,17 @@ import SwiftUI
 import Combine
 
 class DownloadImageAsyncImageLoader{
-    let url = URL(string: "https://picsum.photos/200")!
     
+    let url = URL(string: "https://picsum.photos/200")!
     
     func hangleResponse(data: Data?, response: URLResponse?) -> UIImage? {
         guard
             let data = data,
             let image = UIImage(data: data),
             let response = response as? HTTPURLResponse,
-              response.statusCode >= 200 && response.statusCode < 300 else {
-             return nil
+            response.statusCode >= 200 && response.statusCode < 300 else {
+            return nil
         }
-        
         return image
     }
     
@@ -39,6 +38,15 @@ class DownloadImageAsyncImageLoader{
             .mapError( { $0 } )
             .eraseToAnyPublisher()
     }
+    
+    func downloadAsyncCombineImage() async throws -> UIImage? {
+        do {
+            let (data, response) = try await URLSession.shared.data(from: url, delegate: nil) //try await URLSession.shared.data(for: url, delegate: nil)
+            return hangleResponse(data: data, response: response)
+        } catch  {
+            throw error
+        }
+    }
 }
 
 class DownloadImageAsyncViewModel: ObservableObject {
@@ -50,11 +58,11 @@ class DownloadImageAsyncViewModel: ObservableObject {
     
     func fetchImage(){
         /*
-        loader.downloadWithEscaping { [weak self] image, error in
-            DispatchQueue.main.async {
-                self?.image = image
-            }
-        }*/
+         loader.downloadWithEscaping { [weak self] image, error in
+         DispatchQueue.main.async {
+         self?.image = image
+         }
+         }*/
         
         loader.downloadWithCombine()
             .receive(on: DispatchQueue.main)
@@ -66,26 +74,40 @@ class DownloadImageAsyncViewModel: ObservableObject {
                 }
             }.store(in: &cancellable)
     }
+    
+    func fetchAsyncImage() async {
+        let image = try? await loader.downloadAsyncCombineImage()
+        await MainActor.run{
+            self.image = image
+        }
+    }
+    
+    
 }
 
 struct DownloadImageAsync: View {
     
     @StateObject private var viewModel = DownloadImageAsyncViewModel()
- 
+    
     var body: some View {
         ZStack{
-             if let image = viewModel.image {
-                 Image(uiImage: image)
+            if let image = viewModel.image {
+                Image(uiImage: image)
                     .resizable()
-                    .scaledToFit()
-                    .frame(width: 250, height: 250)
-//                    .background(Color.red)
+                    .scaledToFill()
+                    .padding()
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .onTapGesture {
+                        
+                    }
             }
         }
         .onAppear {
-            viewModel.fetchImage()
+            Task{
+                await viewModel.fetchAsyncImage()
+            }
+//            viewModel.fetchImage()
         }
-
     }
 }
 
