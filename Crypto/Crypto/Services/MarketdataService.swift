@@ -18,7 +18,7 @@ class MarketdataService {
         getData()
     }
     
-    private func getData(){
+    func getData(){
         
         guard let url = URL(string: Api.global) else { return }
         

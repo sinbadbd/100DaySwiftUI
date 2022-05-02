@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import SwiftUI
 
 class HomeVieModel: ObservableObject {
     @Published var statistic: [StatisticModel] = []
@@ -21,6 +22,8 @@ class HomeVieModel: ObservableObject {
     private let portfolioDataService = PortfolioDataService()
     
     private var cancellables = Set<AnyCancellable>()
+    
+    @State var isLoading: Bool = false
     
     init(){
         addSubscriber()
@@ -37,14 +40,6 @@ class HomeVieModel: ObservableObject {
             }
             .store(in: &cancellables)
         
-        //  MARK: update market data
-        marketDataService.$marketData
-            .combineLatest($protfolioCoins)
-            .map(mapGlobalMarketData)
-            .sink { [weak self] resultStats in
-                self?.statistic  = resultStats
-            }.store(in: &cancellables)
-        
         $allCoins
             .combineLatest(portfolioDataService.$saveEntities)
             .map { (coinModel, portfolioEntity) -> [CoinModel] in
@@ -59,6 +54,15 @@ class HomeVieModel: ObservableObject {
                 self?.protfolioCoins = resultCoin
             }
             .store(in: &cancellables)
+        
+        //  MARK: update market data
+        marketDataService.$marketData
+            .combineLatest($protfolioCoins)
+            .map(mapGlobalMarketData)
+            .sink { [weak self] resultStats in
+                self?.statistic  = resultStats
+                self?.isLoading = false
+            }.store(in: &cancellables)
     }
     
     func updatePortfolio(coin: CoinModel, amount: Double){
@@ -88,8 +92,20 @@ class HomeVieModel: ObservableObject {
             .map({ $0.currentHoldingValue })
             .reduce(0, +)
         
-        let portfolio = StatisticModel(title: "Portfolio Value", value: portfoiloValue.asCurrencyWith2Decimals(), percentageChage: 0)
-
+        let previousValue = protfolioCoins.map { (coins) -> Double in
+            let currentValue = coins.currentHoldingValue
+            let percentChange = (coins.priceChangePercentage24H ?? 0.0) / 100
+            let previousVaue = currentValue / (1 + percentChange)
+            return previousVaue
+        }
+            .reduce(0, +)
+        
+        let portfolio = StatisticModel(
+            title: "Portfolio Value",
+            value: portfoiloValue.asCurrencyWith2Decimals(),
+            percentageChage: previousValue
+        )
+        
         stats.append(contentsOf: [
             marketCap,
             volume,
@@ -97,6 +113,14 @@ class HomeVieModel: ObservableObject {
             portfolio
         ])
         return stats
+    }
+    
+    func reloadApiCall(){
+        isLoading = true
+        coinDataService.getCoins()
+        marketDataService.getData()
+        HapticManager.notification(type: .success)
+        print("Reload data...")
     }
 }
 
