@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D3EF3E6283154A700D93E35 /* AsyncAwaitBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3EF3E5283154A600D93E35 /* AsyncAwaitBootcamp.swift */; };
 		1DA12EB22819A3090082E689 /* DownloadImageAsync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA12EB12819A3080082E689 /* DownloadImageAsync.swift */; };
 		1DCC6F8E2817C2A600796361 /* SwiftConcurencyBootcampApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCC6F8D2817C2A600796361 /* SwiftConcurencyBootcampApp.swift */; };
 		1DCC6F902817C2A600796361 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCC6F8F2817C2A600796361 /* ContentView.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D3EF3E5283154A600D93E35 /* AsyncAwaitBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncAwaitBootcamp.swift; sourceTree = "<group>"; };
 		1DA12EB12819A3080082E689 /* DownloadImageAsync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImageAsync.swift; sourceTree = "<group>"; };
 		1DCC6F8A2817C2A600796361 /* SwiftConcurencyBootcamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftConcurencyBootcamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DCC6F8D2817C2A600796361 /* SwiftConcurencyBootcampApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftConcurencyBootcampApp.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				1DCC6F912817C2AA00796361 /* Assets.xcassets */,
 				1DCC6F932817C2AA00796361 /* Preview Content */,
 				1DA12EB12819A3080082E689 /* DownloadImageAsync.swift */,
+				1D3EF3E5283154A600D93E35 /* AsyncAwaitBootcamp.swift */,
 			);
 			path = SwiftConcurencyBootcamp;
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 				1DA12EB22819A3090082E689 /* DownloadImageAsync.swift in Sources */,
 				1DCC6F9C2817C2D200796361 /* DoCatechTryThrowBootCamp.swift in Sources */,
 				1DCC6F902817C2A600796361 /* ContentView.swift in Sources */,
+				1D3EF3E6283154A700D93E35 /* AsyncAwaitBootcamp.swift in Sources */,
 				1DCC6F8E2817C2A600796361 /* SwiftConcurencyBootcampApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,6 +279,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftConcurencyBootcamp/Preview Content\"";
+				DEVELOPMENT_TEAM = 6P26T9HRBD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -303,6 +308,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftConcurencyBootcamp/Preview Content\"";
+				DEVELOPMENT_TEAM = 6P26T9HRBD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
