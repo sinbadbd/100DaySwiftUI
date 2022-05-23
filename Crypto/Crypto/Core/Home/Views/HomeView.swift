@@ -115,8 +115,6 @@ extension HomeView {
                 Image(systemName: "goforward")
             }
             .rotationEffect(Angle(degrees: vm.isLoading ? 360 : 0), anchor: .center)
-//            .rotationEffect(Angle(degrees: vm.isLoading ? 360: 0), anchor: .center)
-
          }
         .font(.caption)
         
