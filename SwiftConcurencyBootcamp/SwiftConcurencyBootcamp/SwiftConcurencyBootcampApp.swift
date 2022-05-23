@@ -12,7 +12,8 @@ struct SwiftConcurencyBootcampApp: App {
     var body: some Scene {
         WindowGroup {
 //            ContentView()
-            AsyncAwaitBootcamp()
+//            AsyncAwaitBootcamp()
+            TaskBootCamp()
         }
     }
 }
