@@ -9,11 +9,11 @@ import Foundation
 import Combine
 
 extension ContentView{
- 
+    
     func collectingValues(){
         
         var subscriptions = Set<AnyCancellable>()
-        
+
         SupportCode.example(of: "Collect") {
             ["A", "B", "C", "D", "E"].publisher
                 .collect(2)
@@ -51,7 +51,7 @@ extension ContentView{
         print("\n---------> tryMap <---------")
         var subscriptions = Set<AnyCancellable>()
         
-         Just("Directory name that does not exist")
+        Just("Directory name that does not exist")
         
             .tryMap { values in
                 try FileManager.default.contentsOfDirectory(atPath: values)
@@ -75,7 +75,7 @@ extension ContentView{
         chat_one.message.value = "How's it going?"
         
         chat.value = chat_two
-            
+        
         chat
             .flatMap{ $0.message }
             .sink { chats in
@@ -83,5 +83,22 @@ extension ContentView{
             }
             .store(in: &subscriptions)
         
+    }
+    
+    func ReplacingUpstreamOutput(){
+        print("\n---------> Replacing upstream output <---------")
+        
+        SupportCode.example(of: "Replacing upstream output") {
+            var subscriptions = Set<AnyCancellable>()
+            
+            let replace =   ["A", nil, "C"].publisher
+            
+            replace
+                .replaceNil(with: "-")
+                .map{ $0!}
+                .sink { item in
+                    print(item)
+                }.store(in: &subscriptions)
+        }
     }
 }

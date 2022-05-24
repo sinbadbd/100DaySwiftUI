@@ -21,6 +21,14 @@ struct ContentView: View {
         mappingValue()
         tryMapValue()
         flatMapValues()
+        ReplacingUpstreamOutput()
+        
+        print("\n---------> Chapter 4: Filtring Operators <---------")
+
+        filterBasic()
+        removeDuplicates()
+        conpactMapValues()
+        ignoreOutpuValues()
     }
     
     
