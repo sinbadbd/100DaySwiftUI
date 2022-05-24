@@ -15,6 +15,7 @@
 		1D3692CB283B905000B4494D /* extension + ContentView + 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3692CA283B904F00B4494D /* extension + ContentView + 2.swift */; };
 		1D3692CD283B90E100B4494D /* chapter3 + Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3692CC283B90E100B4494D /* chapter3 + Operators.swift */; };
 		1D3692D0283BA26400B4494D /* Chatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3692CF283BA26400B4494D /* Chatter.swift */; };
+		1D3692D2283BF88400B4494D /* chapter4 + Filtering operator .swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3692D1283BF88400B4494D /* chapter4 + Filtering operator .swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		1D3692CA283B904F00B4494D /* extension + ContentView + 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "extension + ContentView + 2.swift"; sourceTree = "<group>"; };
 		1D3692CC283B90E100B4494D /* chapter3 + Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "chapter3 + Operators.swift"; sourceTree = "<group>"; };
 		1D3692CF283BA26400B4494D /* Chatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chatter.swift; sourceTree = "<group>"; };
+		1D3692D1283BF88400B4494D /* chapter4 + Filtering operator .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "chapter4 + Filtering operator .swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 		1D3692BB283A164E00B4494D /* chapter4 */ = {
 			isa = PBXGroup;
 			children = (
+				1D3692D1283BF88400B4494D /* chapter4 + Filtering operator .swift */,
 			);
 			path = chapter4;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 				1D3692CD283B90E100B4494D /* chapter3 + Operators.swift in Sources */,
 				1D3692AA283A157000B4494D /* ContentView.swift in Sources */,
 				1D3692CB283B905000B4494D /* extension + ContentView + 2.swift in Sources */,
+				1D3692D2283BF88400B4494D /* chapter4 + Filtering operator .swift in Sources */,
 				1D3692A8283A157000B4494D /* CombieSwiftUIApp.swift in Sources */,
 				1D3692C6283A178000B4494D /* SupportCode.swift in Sources */,
 				1D3692D0283BA26400B4494D /* Chatter.swift in Sources */,
